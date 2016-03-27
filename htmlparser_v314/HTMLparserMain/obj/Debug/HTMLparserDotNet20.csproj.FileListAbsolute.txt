@@ -1,0 +1,8 @@
+C:\Users\Daniel Markham\Downloads\htmlparser_v314\HTMLparserMain\bin\Debug\HTMLparserDotNet20.exe
+C:\Users\Daniel Markham\Downloads\htmlparser_v314\HTMLparserMain\bin\Debug\HTMLparserDotNet20.pdb
+C:\Users\Daniel Markham\Downloads\htmlparser_v314\HTMLparserMain\bin\Debug\HTMLparserDocs20.XML
+C:\Users\Daniel Markham\Downloads\htmlparser_v314\HTMLparserMain\bin\Debug\HTMLparserLibDotNet20.dll
+C:\Users\Daniel Markham\Downloads\htmlparser_v314\HTMLparserMain\bin\Debug\HTMLparserLibDotNet20.pdb
+C:\Users\Daniel Markham\Downloads\htmlparser_v314\HTMLparserMain\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Daniel Markham\Downloads\htmlparser_v314\HTMLparserMain\obj\Debug\HTMLparserDotNet20.exe
+C:\Users\Daniel Markham\Downloads\htmlparser_v314\HTMLparserMain\obj\Debug\HTMLparserDotNet20.pdb

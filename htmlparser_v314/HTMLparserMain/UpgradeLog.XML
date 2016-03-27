@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="HTMLparserDotNet20">
+</Property><Property Name="Solution File" Value="H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparser\HTMLparserDotNet20.sln">
+</Property><Property Name="User Options File" Value="H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparser\HTMLparserDotNet20.suo">
+</Property><Property Name="Date" Value="14 May 2008">
+</Property><Property Name="Time" Value="16:22">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="HTMLparserDotNet20.sln" Description="File successfully backed up as H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparser\Backup\HTMLparserDotNet20.sln">
+</Event><Event ErrorLevel="0" Project="" Source="HTMLparserDotNet20.suo" Description="File successfully backed up as H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparser\Backup\HTMLparserDotNet20.suo">
+</Event><Event ErrorLevel="0" Project="HTMLparserDotNet20" Source="HTMLparserDotNet20.csproj" Description="Project file successfully backed up as H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparser\Backup\HTMLparserDotNet20.csproj">
+</Event><Event ErrorLevel="0" Project="HTMLparserDotNet20" Source="HTMLparserDotNet20.csproj.user" Description="Project user file successfully backed up as H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparser\Backup\HTMLparserDotNet20.csproj.user">
+</Event><Event ErrorLevel="0" Project="HTMLparserDotNet20" Source="AssemblyInfo.cs" Description="File successfully backed up as H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparser\Backup\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="HTMLparserDotNet20" Source="DynaString.cs" Description="File successfully backed up as H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparser\Backup\DynaString.cs">
+</Event><Event ErrorLevel="0" Project="HTMLparserDotNet20" Source="FastHash.cs" Description="File successfully backed up as H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparser\Backup\FastHash.cs">
+</Event><Event ErrorLevel="0" Project="HTMLparserDotNet20" Source="HTMLchunk.cs" Description="File successfully backed up as H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparser\Backup\HTMLchunk.cs">
+</Event><Event ErrorLevel="0" Project="HTMLparserDotNet20" Source="HTMLentities.cs" Description="File successfully backed up as H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparser\Backup\HTMLentities.cs">
+</Event><Event ErrorLevel="0" Project="HTMLparserDotNet20" Source="HTMLheuristics.cs" Description="File successfully backed up as H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparser\Backup\HTMLheuristics.cs">
+</Event><Event ErrorLevel="0" Project="HTMLparserDotNet20" Source="HTMLparser.cs" Description="File successfully backed up as H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparser\Backup\HTMLparser.cs">
+</Event><Event ErrorLevel="0" Project="HTMLparserDotNet20" Source="Main.cs" Description="File successfully backed up as H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparser\Backup\Main.cs">
+</Event><Event ErrorLevel="0" Project="HTMLparserDotNet20" Source="TagParser.cs" Description="File successfully backed up as H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparser\Backup\TagParser.cs">
+</Event><Event ErrorLevel="0" Project="HTMLparserDotNet20" Source="App.ico" Description="File successfully backed up as H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparser\Backup\App.ico">
+</Event><Event ErrorLevel="0" Project="HTMLparserDotNet20" Source="HTMLparserDotNet20.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="HTMLparserDotNet20" Source="HTMLparserDotNet20.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="NUnitTests" Source="NUnitTests\NUnitTests.csproj" Description="Project file successfully backed up as H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparser\Backup\NUnitTests\NUnitTests.csproj">
+</Event><Event ErrorLevel="0" Project="NUnitTests" Source="NUnitTests\HTMLparserTest.cs" Description="File successfully backed up as H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparser\Backup\NUnitTests\HTMLparserTest.cs">
+</Event><Event ErrorLevel="0" Project="NUnitTests" Source="NUnitTests\AssemblyInfo.cs" Description="File successfully backed up as H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparser\Backup\NUnitTests\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="NUnitTests" Source="NUnitTests\NUnitTests.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="NUnitTests" Source="NUnitTests\NUnitTests.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="" Source="HTMLparserDotNet20.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="HTMLparserDotNet20.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="HTMLparserDotNet20" Source="HTMLparserDotNet20.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

@@ -1,0 +1,10 @@
+C:\Users\Daniel Markham\Documents\Visual Studio 2010\Projects\MagicBrickv0\htmlparser_v314\HTMLparser\bin\Debug\HTMLparserLib.dll
+C:\Users\Daniel Markham\Documents\Visual Studio 2010\Projects\MagicBrickv0\htmlparser_v314\HTMLparser\bin\Debug\HTMLparserLib.pdb
+C:\Users\Daniel Markham\Documents\Visual Studio 2010\Projects\MagicBrickv0\htmlparser_v314\HTMLparser\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Daniel Markham\Documents\Visual Studio 2010\Projects\MagicBrickv0\htmlparser_v314\HTMLparser\obj\Debug\HTMLparserLib.dll
+C:\Users\Daniel Markham\Documents\Visual Studio 2010\Projects\MagicBrickv0\htmlparser_v314\HTMLparser\obj\Debug\HTMLparserLib.pdb
+C:\Users\Daniel Markham\Dropbox\source\git-repos\MagicBrickv0\htmlparser_v314\HTMLparser\bin\Debug\HTMLparserLib.dll
+C:\Users\Daniel Markham\Dropbox\source\git-repos\MagicBrickv0\htmlparser_v314\HTMLparser\bin\Debug\HTMLparserLib.pdb
+C:\Users\Daniel Markham\Dropbox\source\git-repos\MagicBrickv0\htmlparser_v314\HTMLparser\obj\Debug\HTMLparserLib.csprojResolveAssemblyReference.cache
+C:\Users\Daniel Markham\Dropbox\source\git-repos\MagicBrickv0\htmlparser_v314\HTMLparser\obj\Debug\HTMLparserLib.dll
+C:\Users\Daniel Markham\Dropbox\source\git-repos\MagicBrickv0\htmlparser_v314\HTMLparser\obj\Debug\HTMLparserLib.pdb

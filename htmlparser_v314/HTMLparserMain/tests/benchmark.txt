@@ -1,0 +1,32 @@
+History of optimisations
+
+Athlon x2 3800 (2Ghz), dual channel 2 GB 400Mhz DRAM, single CPU core used
+
+15/12/06 v2.0.0 
+Parsed 10000 time(s), total time 10.28 secs, ~1.03 ms per full parse.
+
+16/12/06 v3.0.0 .NET 2.0 build, first split of parse tag into 2 parts
+Parsed 10000 time(s), total time 9.39 secs, ~0.94 ms per full parse.
+
+17/12/06 15:00 complete split of parse tag into 3 parts, not yet optimised...
+Parsed 10000 time(s), total time 7.47 secs, ~0.75 ms per full parse.
+
+17/12/06 16:48 raw HTML tracked using offsets, thus no need to append chars
+	       to HTML buffer during tag parsing
+Parsed 10000 time(s), total time 6.80 secs, ~0.68 ms per full parse.
+
+17/12/06 20:25 loop matching text rewritten to avoid accumulator
+Parsed 10000 time(s), total time 5.80 secs, ~0.58 ms per full parse.
+
+17/12/06 21:58 some tweaks in string creation department
+Parsed 10000 time(s), total time 5.73 secs, ~0.57 ms per full parse.
+
+18/12/06 20:33 first heuristical matching of tag only:
+Parsed 10000 time(s), total time 4.83 secs, ~0.48 ms per full parse.
+
+22/12/06 14:43 Final changes - entities are fully supported now in text
+	       and attribute values
+Parsed 10000 time(s), total time 4.73 secs, ~0.47 ms per full parse.
+
+
+Stay tuned for more optimisations in 2007...

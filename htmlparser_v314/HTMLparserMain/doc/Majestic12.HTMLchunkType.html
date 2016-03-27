@@ -1,0 +1,94 @@
+<html dir="LTR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <title>HTMLchunkType Enumeration</title>
+    <xml>
+    </xml>
+    <link rel="stylesheet" type="text/css" href="MSDN.css" />
+  </head>
+  <body id="bodyID" class="dtBODY">
+    <div id="nsbanner">
+      <div id="bannerrow1">
+        <table class="bannerparthead" cellspacing="0">
+          <tr id="hdr">
+            <td class="runninghead">High-performance .NET C# HTMLparser Library</td>
+            <td class="product">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="TitleRow">
+        <h1 class="dtH1">HTMLchunkType Enumeration</h1>
+      </div>
+    </div>
+    <div id="nstext">
+      <p> Type of parsed HTML chunk (token), each non-null returned chunk from HTMLparser will have oType set to one of these values </p>
+      <div class="syntax">
+        <div>public enum HTMLchunkType</div>
+      </div>
+      <h4 class="dtH4">Members</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+          <tr valign="top">
+            <th width="50%">Member Name</th>
+            <th width="50%">Description</th>
+          </tr>
+<tr valign="top"><td><b>Text</b></td><td> Text data from HTML </td></tr>
+<tr valign="top"><td><b>OpenTag</b></td><td> Open tag, possibly with attributes </td></tr>
+<tr valign="top"><td><b>CloseTag</b></td><td> Closed tag (it may still have attributes) </td></tr>
+<tr valign="top"><td><b>Comment</b></td><td> Comment tag (<!-- -->)depending on HTMLparser boolean flags you may have: a) nothing to oHTML variable - for faster performance, call SetRawHTML function in parser b) data BETWEEN tags (but not including comment tags themselves) - DEFAULT c) complete RAW HTML representing data between tags and tags themselves (same as you get in a) when you call SetRawHTML function) </td></tr>
+<tr valign="top"><td><b>Script</b></td><td> Script tag (<!-- -->) depending on HTMLparser boolean flags a) nothing to oHTML variable - for faster performance, call SetRawHTML function in parser b) data BETWEEN tags (but not including comment tags themselves) - DEFAULT c) complete RAW HTML representing data between tags and tags themselves (same as you get in a) when you call SetRawHTML function) </td></tr></table>
+      </div>
+      <h4 class="dtH4">Requirements</h4>
+      <p>
+        <b>Namespace: </b>
+        <a href="Majestic12.html">Majestic12</a>
+      </p>
+      <p>
+        <b>Assembly: </b>HTMLparserDotNet11 (in HTMLparserDotNet11.exe)
+					</p>
+      <h4 class="dtH4">See Also</h4>
+      <p>
+        <a href="Majestic12.html">Majestic12 Namespace</a>
+      </p>
+      <object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" viewastext="true" style="display: none;">
+        <param name="Keyword" value="HTMLchunkType enumeration">
+        </param>
+        <param name="Keyword" value="Majestic12.HTMLchunkType enumeration">
+        </param>
+        <param name="Keyword" value="Text enumeration member">
+        </param>
+        <param name="Keyword" value="HTMLchunkType.Text enumeration member">
+        </param>
+        <param name="Keyword" value="OpenTag enumeration member">
+        </param>
+        <param name="Keyword" value="HTMLchunkType.OpenTag enumeration member">
+        </param>
+        <param name="Keyword" value="CloseTag enumeration member">
+        </param>
+        <param name="Keyword" value="HTMLchunkType.CloseTag enumeration member">
+        </param>
+        <param name="Keyword" value="Comment enumeration member">
+        </param>
+        <param name="Keyword" value="HTMLchunkType.Comment enumeration member">
+        </param>
+        <param name="Keyword" value="Script enumeration member">
+        </param>
+        <param name="Keyword" value="HTMLchunkType.Script enumeration member">
+        </param>
+      </object>
+      <hr />
+      <div id="footer">
+        <p>
+          <a href="mailto:alexc@majestic12.co.uk?subject=High-performance%20.NET%20C#%20HTMLparser%20Library%20Documentation%20Feedback:%20HTMLchunkType%20Enumeration">Send comments on this topic.</a>
+        </p>
+        <p>
+          <a href="http://www.majestic12.co.uk">Copyright (c) Alex Chudnovsky, Majestic-12 (UK)</a>
+        </p>
+        <p>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

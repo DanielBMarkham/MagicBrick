@@ -1,0 +1,23 @@
+H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparser\NUnitTests\bin\Debug\NUnitTests.dll
+H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparser\NUnitTests\bin\Debug\NUnitTests.pdb
+H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparser\NUnitTests\bin\Debug\nunit.framework.dll
+H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparser\NUnitTests\obj\Debug\ResolveAssemblyReference.cache
+H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparser\NUnitTests\obj\Debug\NUnitTests.dll
+H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparser\NUnitTests\obj\Debug\NUnitTests.pdb
+H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparser\NUnitTests\bin\Debug\HTMLparserLibDotNet20.dll
+H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparser\NUnitTests\bin\Debug\HTMLparserLibDotNet20.pdb
+H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparserMain\NUnitTests\bin\Debug\NUnitTests.dll
+H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparserMain\NUnitTests\bin\Debug\NUnitTests.pdb
+H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparserMain\NUnitTests\bin\Debug\HTMLparserLibDotNet20.dll
+H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparserMain\NUnitTests\bin\Debug\nunit.framework.dll
+H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparserMain\NUnitTests\bin\Debug\HTMLparserLibDotNet20.pdb
+H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparserMain\NUnitTests\obj\Debug\ResolveAssemblyReference.cache
+H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparserMain\NUnitTests\obj\Debug\NUnitTests.dll
+H:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparserMain\NUnitTests\obj\Debug\NUnitTests.pdb
+C:\Users\Daniel Markham\Downloads\htmlparser_v314\HTMLparserMain\NUnitTests\bin\Debug\NUnitTests.dll
+C:\Users\Daniel Markham\Downloads\htmlparser_v314\HTMLparserMain\NUnitTests\bin\Debug\NUnitTests.pdb
+C:\Users\Daniel Markham\Downloads\htmlparser_v314\HTMLparserMain\NUnitTests\bin\Debug\HTMLparserLibDotNet20.dll
+C:\Users\Daniel Markham\Downloads\htmlparser_v314\HTMLparserMain\NUnitTests\bin\Debug\HTMLparserLibDotNet20.pdb
+C:\Users\Daniel Markham\Downloads\htmlparser_v314\HTMLparserMain\NUnitTests\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Daniel Markham\Downloads\htmlparser_v314\HTMLparserMain\NUnitTests\obj\Debug\NUnitTests.dll
+C:\Users\Daniel Markham\Downloads\htmlparser_v314\HTMLparserMain\NUnitTests\obj\Debug\NUnitTests.pdb

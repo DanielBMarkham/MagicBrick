@@ -1,0 +1,1 @@
+start bin\debug\HTMLparserDotNet20.exe -f=test.html

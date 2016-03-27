@@ -1,0 +1,919 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HTMLparser</name>
+    </assembly>
+    <members>
+        <member name="T:Majestic12.HTMLparserTest">
+            <summary>
+            HTMLparserTest: example of use of the HTML parser object
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLparserTest.bReadLineDelay">
+            <summary>
+            If true then an ENTER will be required when running this test in interactive mode (default)
+            This mode can be switched off via command line switch NODELAY
+            </summary>
+        </member>
+        <member name="M:Majestic12.HTMLparserTest.Main(System.String[])">
+            <summary>
+            If you don't know what this function is, then its probably best for you not to proceed.
+            
+            </summary>
+        </member>
+        <member name="M:Majestic12.HTMLparserTest.Start(System.Int32,System.String)">
+            <summary>
+            Starts parsing
+            </summary>
+            <param name="iParseTimes">Number of times to parse document (useful for benchmarking)</param>
+        </member>
+        <member name="M:Majestic12.HTMLparserTest.BenchMarkParse(Majestic12.HTMLparser)">
+            <summary>
+            Parse for benchmarking purposes -- its pure test of HTML parsing object, no extra processing done here
+            </summary>
+            <param name="oP">Parser object</param>
+        </member>
+        <member name="M:Majestic12.HTMLparserTest.ParseAndPrint(Majestic12.HTMLparser)">
+            <summary>
+            Parses HTML by chunk, prints parsed data on screen and waits for ENTER to go to next chunk
+            </summary>
+            <param name="oP">Parser object</param>
+        </member>
+        <member name="T:Majestic12.DynaString">
+             <summary>
+             Class for fast dynamic string building - it is faster than StringBuilder
+             </summary>
+            <exclude/>
+        </member>
+        <member name="F:Majestic12.DynaString.sText">
+            <summary>
+            Finalised text will be available in this string
+            </summary>
+        </member>
+        <member name="F:Majestic12.DynaString.TEXT_CAPACITY">
+            <summary>
+            CRITICAL: that much capacity will be allocated (once) for this object -- for performance reasons
+            we do NOT have range checks because we make reasonably safe assumption that accumulated string will
+            fit into the buffer. If you have very abnormal strings then you should increase buffer accordingly.
+            </summary>
+        </member>
+        <member name="M:Majestic12.DynaString.#ctor(System.String)">
+            <summary>
+            Constructor 
+            </summary>
+            <param name="sString">Initial string</param>
+        </member>
+        <member name="M:Majestic12.DynaString.Clear">
+            <summary>
+            Resets object to zero length string
+            </summary>
+        </member>
+        <member name="M:Majestic12.DynaString.SetEncoding(System.Text.Encoding)">
+            <summary>
+            Sets encoding to be used for conversion of binary data into string
+            </summary>
+            <param name="p_oEnc">Encoding object</param>
+        </member>
+        <member name="M:Majestic12.DynaString.Append(System.Byte)">
+            <summary>
+            Appends a "char" to the buffer
+            </summary>
+            <param name="cChar">Appends char (byte really)</param>
+        </member>
+        <member name="M:Majestic12.DynaString.Append(System.Char)">
+            <summary>
+            Appends proper char with smart handling of Unicode chars
+            </summary>
+            <param name="cChar">Char to append</param>
+        </member>
+        <member name="M:Majestic12.DynaString.SetToString">
+            <summary>
+            Creates string from buffer using set encoder
+            </summary>
+        </member>
+        <member name="M:Majestic12.DynaString.SetToStringASCII">
+            <summary>
+            Creates string from buffer using default encoder
+            </summary>
+        </member>
+        <member name="T:Majestic12.HTMLentities">
+            <summary>
+            Implements parsing of entities
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLentities.oEntities">
+            <summary>
+            Supported HTML entities
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLentities.oAllEntities">
+            <summary>
+            Supported HTML entities
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLentities.iMinEntityLen">
+            <summary>
+            Internal heuristics for entiries: these will be set to min and max string lengths of known HTML entities
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLentities.iMaxEntityLen">
+            <summary>
+            Internal heuristics for entiries: these will be set to min and max string lengths of known HTML entities
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLentities.sEntityReverseLookup">
+            <summary>
+            Array to provide reverse lookup for entities
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLentities.bMiniEntities">
+            <summary>
+            If true then only minimal set of entities will be parsed, everything else including numbers based
+            entities will be returned as is. This is useful for when HTML content needs to be extracted with subsequent parsing, in this case resolution of entities will be a problem
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLentities.bDecodeEntities">
+            <summary>
+            If false then HTML entities (like "nbsp") will not be decoded
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Majestic12.HTMLentities.CheckForEntity(System.Byte[],System.Int32@,System.Int32)" -->
+        <member name="M:Majestic12.HTMLentities.DecodeEntities(System.String)">
+            <summary>
+            This function will decode any entities found in a string - not fast!
+            </summary>
+            <returns>Possibly decoded string</returns>
+        </member>
+        <member name="F:Majestic12.HTMLentities.iDecMultipliers">
+            <summary>
+            Multipliers for base 10 
+            </summary>
+        </member>
+        <member name="M:Majestic12.HTMLentities.ParseUInt(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Parses an unsigned integer number from byte buffer
+            </summary>
+            <param name="bBuf">Buffer to parse from</param>
+            <param name="iFrom">Start parsing from this point</param>
+            <param name="iLength">Length of data to parse</param>
+            <returns>Unsigned integer number</returns>
+        </member>
+        <member name="M:Majestic12.HTMLentities.InitEntities(System.Int32@,System.Int32@,System.String[]@)">
+            <summary>
+            Initialises list of entities
+            </summary>
+        </member>
+        <member name="M:Majestic12.HTMLentities.ChangeToEntities(System.String,System.Int32)">
+            <summary>
+            Parses line and changes known entiry characters into proper HTML entiries
+            </summary>
+            <param name="sLine">Line of text</param>
+            <param name="iFrom">Char from which scanning should start</param>
+            <returns>Line of text with proper HTML entities</returns>
+        </member>
+        <member name="M:Majestic12.HTMLentities.InitMiniEntities">
+            <summary>
+            Inits mini-entities mode: only "nbsp" will be converted into space, all other entities 
+            will be left as is
+            </summary>
+        </member>
+        <member name="T:Majestic12.HTMLheuristics">
+            <summary>
+            This class will control HTML tag heuristics that will allow faster matching of tags
+            to avoid long cycles as well as creation of same strings over and over again.
+            
+            This is effectively a fancy hash lookup table with attributes being hashed in context of tag
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLheuristics.MAX_STRINGS">
+            <summary>
+            Maximum number of strings allowed to be set (all lower-cased)
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLheuristics.MAX_CHARS">
+            <summary>
+            Maximum number of chars to be taken into account
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLheuristics.sChars">
+            <summary>
+            Array in which we will keep char hints to quickly match	ID (if non-zero) of tag
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLheuristics.sStrings">
+            <summary>
+            Strings used, once matched they will be returned to avoid creation of a brand new string
+            and all associated costs with it
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLheuristics.bTagData">
+            <summary>
+            Binary data represending tag strings is here: case sensitive: lower case for even even value, and odd for each odd
+            for the same string
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLheuristics.oAddedTags">
+            <summary>
+            List of added tags to avoid dups
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLheuristics.bAttributes">
+            <summary>
+            Hash that will contain single char mapping hash
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLheuristics.bAttrData">
+            <summary>
+            Binary data represending attribute strings is here: case sensitive: lower case for even even value, and odd for each odd
+            for the same string
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLheuristics.oAddedAttributes">
+            <summary>
+            List of added attributes to avoid dups
+            </summary>
+        </member>
+        <member name="M:Majestic12.HTMLheuristics.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Majestic12.HTMLheuristics.AddTag(System.String,System.String)">
+            <summary>
+            Adds tag to list of tracked tags (don't add too many, if you have got multiple same first
+            2 chars then duplicates won't be added, so make sure the first added tags are the MOST LIKELY to be found)
+            </summary>
+            <param name="sTag">Tag: strictly ASCII only</param>
+            <param name="sAttributeNames">Comma delimited list of attributed</param>
+            <param name="bAddClosed">If true then closed version of tag added</param>
+            <returns>True if tag was added, false otherwise (it may already be added, or leads to hash clash)</returns>
+        </member>
+        <member name="M:Majestic12.HTMLheuristics.GetString(System.Int32)">
+            <summary>
+            Returns string for ID returned by GetMatch
+            </summary>
+            <param name="iID">ID</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Majestic12.HTMLheuristics.Dispose">
+            <summary>
+            Disposes of resources
+            </summary>
+        </member>
+        <member name="T:Majestic12.TagParser">
+            <summary>
+            Internal class used to parse tag itself from the point it was found in HTML
+            The main reason for this class is to split very long HTMLparser file into parts that are reasonably
+            self-contained
+            </summary>
+        </member>
+        <member name="F:Majestic12.TagParser.iMaxHeuDataLength">
+            <summary>
+            Max data length for heuristical checks
+            </summary>
+        </member>
+        <member name="F:Majestic12.TagParser.bTagCharTypes">
+            <summary>
+            Tag char types lookup table: allows one off lookup to determine if char used in tag is acceptable
+            </summary>
+        </member>
+        <member name="F:Majestic12.TagParser.bEnableHeuristics">
+            <summary>
+            If true then heuristics engine will be used to match tags quicker
+            </summary>
+        </member>
+        <member name="M:Majestic12.TagParser.Init(Majestic12.HTMLparser,Majestic12.HTMLchunk,Majestic12.DynaString,System.Byte[],System.Int32,Majestic12.HTMLentities,Majestic12.HTMLheuristics)">
+            <summary>
+            Inits tag parser
+            </summary>
+            <param name="p_oChunk"></param>
+            <param name="p_sText"></param>
+        </member>
+        <member name="M:Majestic12.TagParser.CleanUp">
+            <summary>
+            Cleans up tag parser
+            </summary>
+        </member>
+        <member name="M:Majestic12.TagParser.ParseTag(System.Int32@)">
+            <summary>
+            Internal: parses tag that started from current position
+            </summary>
+            <param name="bKeepWhiteSpace">If true then whitespace will be kept, if false then it won't be (faster option)</param>
+            <returns>HTMLchunk with tag information</returns>
+        </member>
+        <member name="M:Majestic12.TagParser.ParseComments(System.Int32@)">
+            <summary>
+            Finishes parsing of comments tag
+            </summary>
+            <returns>HTMLchunk object</returns>
+        </member>
+        <member name="F:Majestic12.TagParser.bClosedScriptTag">
+            <summary>
+            /script sequence indicating end of script tag
+            </summary>
+        </member>
+        <member name="M:Majestic12.TagParser.ParseScript(System.Int32@)">
+            <summary>
+            Finishes parsing of data after scripts tag - makes extra checks to avoid being broken
+            with >'s used to denote comparison
+            </summary>
+            <returns>HTMLchunk object</returns>
+        </member>
+        <member name="T:Majestic12.FastHash">
+            <summary>
+            FastHash: class provides fast look ups at the expense of memory (at least 128k per object).
+            Its designed primarily for those hashes where majority of lookups are unsuccessful 
+            (ie object is not present)
+            
+            Status of this work is EXPERIMENTAL, do not make any untested assumptions.
+            
+            History:	15/12/06 Added range check in GetXY
+            			sometime in 2005: initial imlpementation
+            
+            </summary>
+        </member>
+        <member name="F:Majestic12.FastHash.MAX_CHARS">
+            <summary>
+            Maximum number of chars to be taken into account
+            </summary>
+        </member>
+        <member name="F:Majestic12.FastHash.MAX_KEYS">
+            <summary>
+            Maximum number of keys to be stored
+            </summary>
+        </member>
+        <member name="F:Majestic12.FastHash.MULTIPLE_KEYS">
+            <summary>
+            Value indicating there are multiple keys stored in a given position
+            </summary>
+        </member>
+        <member name="F:Majestic12.FastHash.oHash">
+            <summary>
+            Hash that will contain keys and will be used at the last resort as looksup are too slow
+            </summary>
+        </member>
+        <member name="F:Majestic12.FastHash.iMinLen">
+            <summary>
+            Minimum key length 
+            </summary>
+        </member>
+        <member name="F:Majestic12.FastHash.iMaxLen">
+            <summary>
+            Maximum key length
+            </summary>
+        </member>
+        <member name="F:Majestic12.FastHash.usChars">
+            <summary>
+            Array in which we will keep char hints
+            </summary>
+        </member>
+        <member name="F:Majestic12.FastHash.sKeys">
+            <summary>
+            Keys
+            </summary>
+        </member>
+        <member name="F:Majestic12.FastHash.iValues">
+            <summary>
+            Values of keys
+            </summary>
+        </member>
+        <member name="F:Majestic12.FastHash.usCount">
+            <summary>
+            Number of keys stored
+            </summary>
+        </member>
+        <member name="M:Majestic12.FastHash.Add(System.String)">
+            <summary>
+            Adds key to the fast hash
+            </summary>
+            <param name="sKey">Key</param>
+        </member>
+        <member name="M:Majestic12.FastHash.Add(System.String,System.Object)">
+            <summary>
+            Adds key and its value to the fast hash
+            </summary>
+            <param name="sKey">Key</param>
+            <param name="iValue">Value</param>
+        </member>
+        <member name="M:Majestic12.FastHash.Contains(System.String)">
+            <summary>
+            Checks if given key is present in the hash
+            </summary>
+            <param name="sKey">Key</param>
+            <returns>True if key is present</returns>
+        </member>
+        <member name="M:Majestic12.FastHash.GetValue(System.String)">
+            <summary>
+            Returns value associated with the key or null if key not present
+            </summary>
+            <param name="sKey">Key</param>
+            <returns>Null or object convertable to integer as value</returns>
+        </member>
+        <member name="M:Majestic12.FastHash.GetLikelyPresentValue(System.String)">
+            <summary>
+            Returns value of a key that is VERY likely to be present - this avoids doing some checks that
+            are most likely to be pointless thus making overall faster function
+            </summary>
+            <param name="sKey">Key</param>
+            <returns>Null if no value or value itself</returns>
+        </member>
+        <member name="M:Majestic12.FastHash.GetLikelyPresentValue(System.Byte,System.Byte)">
+            <summary>
+            Returns value for likely present keys using first chars (byte)
+            </summary>
+            <param name="iX">Byte 1 denoting char 1</param>
+            <param name="iY">Byte 2 denoting char 2 (0 if not present)</param>
+            <returns>Non-null value if it was found, or null if full search for key is required</returns>
+        </member>
+        <member name="M:Majestic12.FastHash.PossiblyContains(System.Char,System.Char,System.Int32)">
+            <summary>
+            Quickly checks if given chars POSSIBLY refer to a stored key.
+            </summary>
+            <param name="cChar1">Char 1</param>
+            <param name="cChar2">Char 2</param>
+            <param name="iLength">Length of string</param>
+            <returns>False is string is DEFINATELY NOT present, or true if it MAY be present</returns>
+        </member>
+        <member name="P:Majestic12.FastHash.Keys">
+            <summary>
+            Gets keys in this hash
+            </summary>
+        </member>
+        <member name="P:Majestic12.FastHash.Item(System.String)">
+            <summary>
+            Access to values via indexer
+            </summary>
+        </member>
+        <member name="T:Majestic12.HTMLparser">
+            <summary>
+            Allows to parse HTML by splitting it into small token (HTMLchunks) such as tags, text, comments etc.
+            
+            Do NOT create multiple instances of this class - REUSE single instance
+            Do NOT call same instance from multiple threads - it is NOT thread safe
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLparser.bKeepRawHTML">
+            <summary>
+            If true (default: false) then parsed tag chunks will contain raw HTML, otherwise only comments will have it set
+            <p>
+            Performance hint: keep it as false, you can always get to original HTML as each chunk contains
+            offset from which parsing started and finished, thus allowing to set exact HTML that was parsed
+            </p>
+            </summary>
+            <exclude/>
+        </member>
+        <member name="F:Majestic12.HTMLparser.bAutoKeepComments">
+            <summary>
+            If true (default) then HTML for comments tags themselves AND between them will be set to oHTML variable, otherwise it will be empty
+            but you can always set it later 
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLparser.bAutoKeepScripts">
+            <summary>
+            If true (default: false) then HTML for script tags themselves AND between them will be set to oHTML variable, otherwise it will be empty
+            but you can always set it later
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLparser.bAutoExtractBetweenTagsOnly">
+            <summary>
+            If true (and either bAutoKeepComments or bAutoKeepScripts is true), then oHTML will be set
+            to data BETWEEN tags excluding those tags themselves, as otherwise FULL HTML will be set, ie:
+            '<!-- comments -->' but if this is set to true then only ' comments ' will be returned
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLparser.bAutoMarkClosedTagsWithParamsAsOpen">
+            <summary>
+            Long winded name... by default if tag is closed BUT it has got parameters then we will consider it
+            open tag, this is not right for proper XML parsing
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLparser.bTextMode">
+            <summary>
+            If false (true by default) then text will be ignored -- it will make parser run faster but in effect only HTML tags 
+            will be returned, thus it is only useful when you just want to parse links or something like this.
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLparser.oHE">
+            <summary>
+            Heuristics engine used by Tag Parser to quickly match known tags and attribute names 
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLparser.sText">
+            <summary>
+            Internal -- dynamic string for text accumulation
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLparser.oChunk">
+            <summary>
+            This chunk will be returned when it was parsed
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLparser.oTP">
+            <summary>
+            Tag parser object
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLparser.oEnc">
+            <summary>
+            Encoding used to convert binary data into string
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLparser.bHTML">
+            <summary>
+            Byte array with HTML will be kept here
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:Majestic12.HTMLparser.iCurPos" -->
+        <member name="F:Majestic12.HTMLparser.iDataLength">
+            <summary>
+            Length of bHTML -- it appears to be faster to use it than bHTML.Length
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLparser.bWhiteSpace">
+            <summary>
+            Whitespace lookup table - 0 is not whitespace, otherwise it is
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLparser.oE">
+            <summary>
+            Entities manager
+            </summary>
+        </member>
+        <member name="M:Majestic12.HTMLparser.SetChunkHashMode(System.Boolean)">
+            <summary>
+            Sets chunk param hash mode
+            </summary>
+            <param name="bHashMode">If true then tag's params will be kept in Chunk's hashtable (slower), otherwise kept in arrays (sParams/sValues)</param>
+        </member>
+        <member name="M:Majestic12.HTMLparser.SetRawHTML(Majestic12.HTMLchunk)">
+            <summary>
+            Sets oHTML variable in a chunk to the raw HTML that was parsed for that chunk.
+            </summary>
+            <param name="oChunk">Chunk returned by ParseNext function, it must belong to the same HTMLparser that
+            was initiated with the same HTML data that this chunk belongs to</param>
+        </member>
+        <member name="M:Majestic12.HTMLparser.Close">
+            <summary>
+            Closes object and releases all allocated resources
+            </summary>
+        </member>
+        <member name="M:Majestic12.HTMLparser.SetEncoding(System.Text.Encoding)">
+            <summary>
+            Sets encoding 
+            </summary>
+            <param name="p_oEnc">Encoding object</param>
+        </member>
+        <member name="M:Majestic12.HTMLparser.SetEncoding(System.String)">
+            <summary>
+            Sets current encoding in format used in HTTP headers and HTML META tags
+            </summary>
+            <param name="sCharSet">Charset as </param>
+            <returns>True if encoding was set, false otherwise (in which case Default encoding will be used)</returns>
+        </member>
+        <member name="M:Majestic12.HTMLparser.GetCharSet(System.String)">
+            <summary>
+            Retrieves charset information from format used in HTTP headers and META descriptions
+            </summary>
+            <param name="sData">Data to find charset info from</param>
+            <returns>Charset</returns>
+        </member>
+        <member name="M:Majestic12.HTMLparser.InitMiniEntities">
+            <summary>
+            Inits mini-entities mode: only "nbsp" will be converted into space, all other entities 
+            will be left as is
+            </summary>
+        </member>
+        <member name="M:Majestic12.HTMLparser.ChangeToEntities(System.String)">
+            <summary>
+            Parses line and changes known entiry characters into proper HTML entiries
+            </summary>
+            <param name="sLine">Line of text</param>
+            <returns>Line of text with proper HTML entities</returns>
+        </member>
+        <member name="M:Majestic12.HTMLparser.#ctor(System.String)">
+            <summary>
+            Constructs parser object using provided HTML as source for parsing
+            </summary>
+            <param name="p_oHTML"></param>
+        </member>
+        <member name="M:Majestic12.HTMLparser.SetTextMode(System.Boolean)">
+            <summary>
+            Sets text treatment mode 
+            </summary>
+            <param name="p_bTextMode">If TRUE, then text will be parsed, if FALSE then it will be ignored (parsing of tags will be faster however)</param>
+        </member>
+        <member name="M:Majestic12.HTMLparser.Init(System.String)">
+            <summary>
+            Initialises parses with HTML to be parsed from provided string
+            </summary>
+            <param name="p_oHTML">String with HTML in it</param>
+        </member>
+        <member name="M:Majestic12.HTMLparser.Init(System.Byte[])">
+            <summary>
+            Initialises parses with HTML to be parsed from provided data buffer: this is best in terms of
+            correctness of parsing of various encodings that can be used in HTML
+            </summary>
+            <param name="p_bHTML">Data buffer with HTML in it</param>
+        </member>
+        <member name="M:Majestic12.HTMLparser.CleanUp">
+            <summary>
+            Cleans up parser in preparation for next parsing
+            </summary>
+        </member>
+        <member name="M:Majestic12.HTMLparser.Reset">
+            <summary>
+            Resets current parsed data to start
+            </summary>
+        </member>
+        <member name="M:Majestic12.HTMLparser.Eof">
+            <summary>
+            Returns true if we reached end of data
+            </summary>
+            <returns>True if we reached data end</returns>
+        </member>
+        <member name="M:Majestic12.HTMLparser.LookBack(System.Int32)">
+            <summary>
+            Looks back X bytes and returns char that was there, or 0 if its start
+            </summary>
+            <returns>Previous byte, or 0 if we will reached start position</returns>
+        </member>
+        <member name="M:Majestic12.HTMLparser.IsBiggerFont(Majestic12.HTMLparser.FontSize,Majestic12.HTMLparser.FontSize)">
+            <summary>
+            Checks if first font is bigger than the second
+            </summary>
+            <param name="oFont1">Font #1</param>
+            <param name="oFont2">Font #2</param>
+            <returns>True if Font #1 bigger than the second, false otherwise</returns>
+        </member>
+        <member name="M:Majestic12.HTMLparser.IsEqualOrBiggerFont(Majestic12.HTMLparser.FontSize,Majestic12.HTMLparser.FontSize)">
+            <summary>
+            Checks if first font is equal or bigger than the second
+            </summary>
+            <param name="oFont1">Font #1</param>
+            <param name="oFont2">Font #2</param>
+            <returns>True if Font #1 equal or bigger than the second, false otherwise</returns>
+        </member>
+        <member name="M:Majestic12.HTMLparser.ParseFontSize(System.String,Majestic12.HTMLparser.FontSize)">
+            <summary>
+            Parses font's tag size param 
+            </summary>
+            <param name="sSize">String value of the size param</param>
+            <param name="iBaseFontSize">Optional base font size, use -1 if its not present</param>
+            <param name="iCurSize"></param>
+            <returns>Relative size of the font size or Unknown if it was not determined</returns>
+        </member>
+        <member name="M:Majestic12.HTMLparser.ParseNext">
+            <summary>
+            Parses next chunk and returns it with 
+            </summary>
+            <returns>HTMLchunk or null if end of data reached</returns>
+        </member>
+        <member name="M:Majestic12.HTMLparser.CalculateWidth(System.String,System.Int32,System.Boolean@)">
+            <summary>
+            Parses WIDTH param and calculates width
+            </summary>
+            <param name="sWidth">WIDTH param from tag</param>
+            <param name="iAvailWidth">Currently available width for relative calculations, if negative width will be returned as is</param>
+            <param name="bRelative">Flag that will be set to true if width was relative</param>
+            <returns>Width in pixels</returns>
+        </member>
+        <member name="M:Majestic12.HTMLparser.DecodeEntities(System.String)">
+            <summary>
+            This function will decode any entities found in a string - not fast!
+            </summary>
+            <returns>Possibly decoded string</returns>
+        </member>
+        <member name="M:Majestic12.HTMLparser.LoadFromFile(System.String)">
+            <summary>
+            Loads HTML from file
+            </summary>
+            <param name="sFileName">Full filename</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Majestic12.HTMLparser.bDecodeEntities" -->
+        <!-- Badly formed XML comment ignored for member "P:Majestic12.HTMLparser.bDecodeMiniEntities" -->
+        <member name="P:Majestic12.HTMLparser.bEnableHeuristics">
+            <summary>
+            If true (default) then heuristics engine will be used to match tags and attributes quicker, it is
+            possible to add new tags to it, <see cref="F:Majestic12.HTMLparser.oHE"/>
+            </summary>
+        </member>
+        <member name="T:Majestic12.HTMLparser.FontSize">
+            <summary>
+            Font sizes as described by W3C: http://www.w3.org/TR/REC-CSS2/fonts.html#propdef-font-size
+            </summary>
+            <exclude/>
+        </member>
+        <member name="T:Majestic12.HTMLchunkType">
+            <summary>
+            Type of parsed HTML chunk (token)
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLchunkType.Text">
+            <summary>
+            Text data from HTML
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLchunkType.OpenTag">
+            <summary>
+            Open tag, pissibly with attributes
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLchunkType.CloseTag">
+            <summary>
+            Closed tag   (it may still have attributes)
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLchunkType.Comment">
+            <summary>
+            Data between HTML comments: requires manual call to HTMLchunk.Finalise() before data is available
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLchunkType.Script">
+            <summary>
+            Data betweeen script tags:  requires manual call to HTMLchunk.Finalise() before data is available
+            </summary>
+        </member>
+        <member name="T:Majestic12.HTMLchunk">
+            <summary>
+            Parsed HTML token that is either text, comment, script, open or closed tag as indicated by the oType variable.
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLchunk.TEXT_CAPACITY">
+            <summary>
+            Maximum default capacity of buffer that will keep data
+            </summary>
+            <exclude/>
+        </member>
+        <member name="F:Majestic12.HTMLchunk.MAX_PARAMS">
+            <summary>
+            Maximum number of parameters in a tag - should be high enough to fit most sensible cases
+            </summary>
+            <exclude/>
+        </member>
+        <member name="F:Majestic12.HTMLchunk.oType">
+            <summary>
+            Chunk type showing whether its text, open or close tag, comments or script.
+            WARNING: if type is comments or script then you have to manually call Finalise(); method
+            in order to have actual text of comments/scripts in oHTML variable
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLchunk.bHashMode">
+            <summary>
+            If true then tag params will be kept in a hash rather than in a fixed size arrays. 
+            This will be slow down parsing, but make it easier to use.
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLchunk.oHTML">
+            <summary>
+            For TAGS: it stores raw HTML that was parsed to generate thus chunk will be here UNLESS
+            HTMLparser was configured not to store it there as it can improve performance
+            <p>
+            For TEXT or COMMENTS: actual text or comments - you MUST call Finalise(); first.
+            </p>
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLchunk.iChunkOffset">
+            <summary>
+            Offset in bHTML data array at which this chunk starts
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLchunk.iChunkLength">
+            <summary>
+            Length of the chunk in bHTML data array
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLchunk.sTag">
+            <summary>
+            If its open/close tag type then this is where lowercased Tag will be kept
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLchunk.bClosure">
+            <summary>
+            If true then it must be closed tag
+            </summary>
+            <exclude/>
+        </member>
+        <member name="F:Majestic12.HTMLchunk.bComments">
+            <summary>
+            If true then it must be comments tag
+            </summary>
+            <exclude/>
+        </member>
+        <member name="F:Majestic12.HTMLchunk.bEntities">
+            <summary>
+            True if entities were present (and transformed) in the original HTML
+            </summary>
+            <exclude/>
+        </member>
+        <member name="F:Majestic12.HTMLchunk.bLtEntity">
+            <summary>
+            Set to true if &lt; entity (tag start) was found 
+            </summary>
+            <exclude/>
+        </member>
+        <member name="F:Majestic12.HTMLchunk.oParams">
+            <summary>
+            Hashtable with tag parameters: keys are param names and values are param values.
+            ONLY used if bHashMode is set to TRUE.
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLchunk.iParams">
+            <summary>
+            Number of parameters and values stored in sParams array, OR in oParams hashtable if
+            bHashMode is true
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLchunk.sParams">
+            <summary>
+            Param names will be stored here - actual number is in iParams.
+            ONLY used if bHashMode is set to FALSE.
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLchunk.sValues">
+            <summary>
+            Param values will be stored here - actual number is in iParams.
+            ONLY used if bHashMode is set to FALSE.
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLchunk.cParamChars">
+            <summary>
+            Character used to quote param's value: it is taken actually from parsed HTML
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLchunk.oEnc">
+            <summary>
+            Encoder to be used for conversion of binary data into strings, Encoding.Default is used by default,
+            but it can be changed if top level user of the parser detects that encoding was different
+            </summary>
+        </member>
+        <member name="M:Majestic12.HTMLchunk.ConvertParamsToHash">
+            <summary>
+            This function will convert parameters stored in sParams/sValues arrays into oParams hash
+            Useful if generally parsing is done when bHashMode is FALSE. Hash operations are not the fastest, so
+            its best not to use this function.
+            </summary>
+        </member>
+        <member name="M:Majestic12.HTMLchunk.SetEncoding(System.Text.Encoding)">
+            <summary>
+            Sets encoding to be used for conversion of binary data into string
+            </summary>
+            <param name="p_oEnc">Encoding object</param>
+        </member>
+        <member name="M:Majestic12.HTMLchunk.GenerateHTML">
+            <summary>
+            Generates HTML based on current chunk's data 
+            Note: this is not a high performance method and if you want ORIGINAL HTML that was parsed to create
+            this chunk then use relevant HTMLparser method to obtain such HTML
+            </summary>
+            <returns>HTML equivalent of this chunk</returns>
+        </member>
+        <member name="M:Majestic12.HTMLchunk.GetParamValue(System.String)">
+            <summary>
+            Returns value of a parameter
+            </summary>
+            <param name="sParam">Parameter</param>
+            <returns>Parameter value or empty string</returns>
+        </member>
+        <member name="M:Majestic12.HTMLchunk.GenerateParamsHTML">
+            <summary>
+            Generates HTML for params in this chunk
+            </summary>
+            <returns>String with HTML corresponding to params</returns>
+        </member>
+        <member name="M:Majestic12.HTMLchunk.GenerateParamHTML(System.String,System.String,System.Char)">
+            <summary>
+            Generates HTML for param/value pair
+            </summary>
+            <param name="sParam">Param</param>
+            <param name="sValue">Value (empty if not specified)</param>
+            <returns>String with HTML</returns>
+        </member>
+        <member name="M:Majestic12.HTMLchunk.MakeSafeParamValue(System.String,System.Char)">
+            <summary>
+            Makes parameter value safe to be used in param - this will check for any conflicting quote chars,
+            but not full entity-encoding
+            </summary>
+            <param name="sLine">Line of text</param>
+            <param name="cQuoteChar">Quote char used in param - any such chars in text will be entity-encoded</param>
+            <returns>Safe text to be used as param's value</returns>
+        </member>
+        <member name="M:Majestic12.HTMLchunk.AddParam(System.String,System.String,System.Byte)">
+            <summary>
+            Adds tag parameter to the chunk
+            </summary>
+            <param name="sParam">Parameter name (ie color)</param>
+            <param name="sValue">Value of the parameter (ie white)</param>
+        </member>
+        <member name="M:Majestic12.HTMLchunk.Clear">
+            <summary>
+            Clears chunk preparing it for 
+            </summary>
+        </member>
+        <member name="M:Majestic12.HTMLchunk.#ctor(System.Boolean)">
+            <summary>
+            Initialises new HTMLchunk
+            </summary>
+            <param name="p_bHashMode">Sets <seealso cref="F:Majestic12.HTMLchunk.bHashMode"/></param>
+        </member>
+    </members>
+</doc>

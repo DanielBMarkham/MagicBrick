@@ -1,0 +1,8 @@
+bin\Debug\NUnitTests.dll
+bin\Debug\NUnitTests.pdb
+bin\Debug\HTMLparserDotNet20.exe
+bin\Debug\nunit.framework.dll
+bin\Debug\HTMLparserDotNet20.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\NUnitTests.dll
+obj\Debug\NUnitTests.pdb

@@ -1,0 +1,245 @@
+<html>
+<head>
+<title>Majestic-12: Distributed Search Engine</title>
+<base href="http://www.majestic12.co.uk">
+<link rel="stylesheet" href="/css/mj12.css" type="text/css"/>
+<meta name="Keywords" content="Majestic-12,Majestic12, Majestic 12 UK, distributed search engine project, dsearch, mj12node, mj12 node, search engine optimisation, SEO"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#0000cc" vlink="551A8B" alink="#FF0000">
+
+<div align="center">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr><td colspan="3" bgcolor="#000000" height="1"><img src="/images/black.gif" width="1" height="1"></td></tr>
+<tr><td bgcolor="#000000" width="1"><img src="/images/black.gif" width="1" height="1"></td>
+<td>
+
+<table cellpadding="8" cellspacing="0" border="0" width="100%">
+
+<tr><td colspan="1" rowspan="2" align="left" bgcolor="#D1D7DC">
+<a href="/"><img border="0" src="/images/mj12logo.png" align="left" alt="Majestic-12 logo"></a>
+</td>
+<td align=right valign=top bgcolor="#D1D7DC"><font size="4"><b>Distributed&nbsp;Search&nbsp;Engine&nbsp;Project</b></td>
+</tr>
+<tr>
+<td bgcolor="#D1D7DC" align="right" valign="bottom">
+
+<script type="text/javascript">
+<!--
+function errorMsg(name,ext,cat)
+{
+  alert("Sorry, but you need Firefox or Mozilla or Netscape 7 to install search plugin! Get Firefox from www.mozilla.org");
+
+/*
+  f=document.createElement("form");
+  f.setAttribute("name","installform");
+  f.setAttribute("method","post");
+  f.setAttribute("action","http://mycroft.mozdev.org/error.html");
+  fe=document.createElement("input");
+  fe.setAttribute("type","hidden");
+  fe.setAttribute("name","name");
+  fe.setAttribute("value",name);
+  f.appendChild(fe);
+  fe=document.createElement("input");
+  fe.setAttribute("type","hidden");
+  fe.setAttribute("name","ext");
+  fe.setAttribute("value",ext);
+  f.appendChild(fe);
+  fe=document.createElement("input");
+  fe.setAttribute("type","hidden");
+  fe.setAttribute("name","cat");
+  fe.setAttribute("value",cat);
+  f.appendChild(fe);
+  document.getElementsByTagName("body")[0].appendChild(f);
+  if (document.installform) { 
+    document.installform.submit();
+  } else {
+    location.href="http://mycroft.mozdev.org/error.html"; //hack for DOM-incompatible browsers
+  }
+  */
+}
+function addEngine(name,ext,cat,type)
+{
+  if ((typeof window.sidebar == "object") && (typeof
+  window.sidebar.addSearchEngine == "function"))
+  {
+    //cat="Web";
+    //cat=prompt("In what category should this engine be installed?","Web")
+    if (type!="0") {      window.sidebar.addSearchEngine(
+		"http://www.majestic12.co.uk/projects/dsearch/plugins/firefox/"+name + ".src",
+		"http://www.majestic12.co.uk/projects/dsearch/plugins/firefox/"+name + "." + ext,
+       // "http://mycroft.mozdev.org/nowrapper/submit-install.php/v/" + type + "/" + name + ".src",
+       // "http://mycroft.mozdev.org/nowrapper/submit-install.php/i/" + type + "/" + name + "."+ ext,
+        name,
+        cat );
+    } else {      window.sidebar.addSearchEngine(
+		"http://www.majestic12.co.uk/projects/dsearch/plugins/firefox/"+name + ".src",
+		"http://www.majestic12.co.uk/projects/dsearch/plugins/firefox/"+name + "." + ext,
+        name,
+        cat );
+    }  }
+  else
+  {
+    errorMsg(name,ext,cat);
+  }
+}
+//-->
+</script>
+
+<a href="javascript:addEngine('majestic12','png','General','3153')">
+
+<img src="/images/misc/getplugbtn1.png" width="110" height="32" title="Install the 'Majestic-12' search plugin." alt="Install the 'Majestic-12' search plugin.">
+</a>
+
+
+<!--
+<font size="-1">
+<form action="/tools/emailmanager.php" method="POST"><b>News:</b>
+<input type="hidden" name="Operation" value="Subscribe">
+<input type="hidden" name="List" value="general"> 
+<input type="text" size="15" name="Email">
+<input type="submit" value="Subscribe">
+</form>
+-->
+
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center" bgcolor="#EEEEEE">
+
+<font size="2"><a href="/">Home</a></font> |
+<font size="2"><a href="/projects/dsearch/">DSearch</a></font> |
+
+<font size="2"><a href="/projects/dsearch/stats.php">Stats</a></font> |
+<font size="2"><a href="/projects/dsearch/screenshots.php">Screenshots</a></font> |
+<font size="2"><a href="/projects/dsearch/download.php">Download</a></font> |
+<font size="2"><a href="http://www.majestic12.co.uk/forum/">Forum</a></font> |
+<font size="2"><a href="http://www.majestic12.co.uk/webcam/">Webcam</a></font> |
+<font size="2"><a href="/about.php">About</a></font>
+
+</td></tr>
+<tr>
+
+<td colspan="2">
+
+<table  cellpadding="8" cellspacing="0" border="0" width="100%"><tr><td>
+
+<!--
+
+<table width=100%>
+<tr>
+	<td>
+
+	</td>
+</tr>
+</table>
+-->
+<br>
+<table width=100% border=0>
+<tr>
+<td width=80% valign=top>
+<h2>Welcome to Majestic-12!</h2>
+<br>
+<p>
+
+<p>
+<p>
+<b>30/09/05</b> <b>370 mln URLs added</b><br>
+<p>
+Just over two weeks from the last URL load more data had to be parsed to catch up with the new high crawling levels with 370 mln new unique URLs added to the system taking number of <a href="/projects/dsearch/stats.php">known URLs</a> to almost 1,800,000,000 unique URLs!
+<p>
+<b>27/09/05</b> <b>20 mln URLs crawled today!</b><br>
+<p>
+
+Today the community set new record worthy of remembering -- 20 mln URLs crawled representing whopping 433 Gigabytes (almost half a terabyte!) of raw data in less than a day! Screenshot of those who made the record is <a href="http://www.majestic12.co.uk/forum/viewtopic.php?p=5285">here</a>.
+<p>
+<b>26/09/05</b> <b>Search engine updated to v0.2.0</b><br>
+<p>
+Significant update to the <a href="http://majestic12.kicks-ass.org:8888">search engine</a> fixing a number of bugs and introducing new ability for users to create their own ranking formulaes and see how they change search results!
+<p>
+
+<b>20/09/05</b> <b> MJ12node v1.0.8</b><br>
+
+<p>
+New version of MJ12node <a href="/projects/dsearch/download.php">released</a> with bug fixes, better URL scheduling strategy that should
+minimise number of buckets with 1 domains and lots of URLs left, and a new feature allowing to compress crawled data 15-30% better (not enabled by default, see Options->Crawler->Enable barrel sorting). Details on what's changed
+are <a href="http://www.majestic12.co.uk/forum/viewtopic.php?t=618">here</a>.
+
+<p>
+<b>12/09/05</b> <b>270 mln URLs added</b><br>
+<p>
+Over 1.5 TB (TeraBytes!) of crawled data was parsed for new URLs, and after deduplication and filtering just over 270 mln more URLs
+were added to the system taking number of <a href="/projects/dsearch/stats.php">known URLs</a> to over 1,400,000,000 (for those who get dizzy from all those zeroes -- that's 1.4 billion!)
+
+<p>
+<b>5/09/05</b> <b>1 bln crawled URLs + MJ12node v1.0.7</b><br>
+<p>
+Today we reached a major milestone of 1,000,000,000 crawled URLs! It only took 8 months from public beta of the crawler, and next billion should take a lot less time! :)
+<p>
+New version of MJ12node <a href="/projects/dsearch/download.php">released</a> with lots of changes making it a worthy upgrade. Details on what's changed
+are <a href="http://www.majestic12.co.uk/forum/viewtopic.php?p=3707">here</a>.
+
+<p>
+<b>29/08/05</b> <b>MJ12node v1.0.6 + more URLs + Firefox search plug-in!</b><br>
+
+<p>
+New version of MJ12node <a href="/projects/dsearch/download.php">released</a> with an number of bug-fixes and one important change that calls for speedy upgrade of your clients, please <a href="/projects/dsearch/download.php">get</a> updated versions as soon as you can!
+<p>
+115 mlns more URLs were addded to the system taking number of <a href="/projects/dsearch/tlds.php">known URLs</a> to almost 1,150,000,000.
+<p>
+Anyone with <a href="http://www.mozilla.org/products/firefox/">Firefox</a> (and why shouldn't you use the best browser available?) can now add <a href="javascript:addEngine('majestic12','png','General','3153')">Majestic-12 search engine plug-in</a> to the list of search engines, don't be shy to use it to search -- this will help improve the search engine!
+
+
+<p>
+<b>28/08/05</b> <b>Stats upgraded!</b><br>
+<p>
+
+Upgraded stats on this site now show breakdown by <a href="/projects/dsearch/countries.php">countries</a>, <a href="/projects/dsearch/platforms.php">platforms</a>, <a href="/projects/dsearch/bestdays.php">best daily rates</a>, more per <a href="/projects/dsearch/userinfo.php?id=62">peer stats</a> and <a href="/projects/dsearch/addtosite.php">instructions on what HTML</a> you need to use if you want to put some of your personal stats onto your webpages (more ideas in this area particularly welcome). Best place to start exploring new stats is from <a href="/projects/dsearch/stats.php">here</a>.
+
+
+<p>
+<b>16/08/05</b> <b>Search engine updated to v0.1.5 + 1 bln URLs known!</b><br>
+<p>
+Significant update to the <a href="http://majestic12.kicks-ass.org:8888">search engine</a> now with almost 45 mln URLs, some bugs fixed and new features such as <a href="http://majestic12.kicks-ass.org:8888/search.jhh?q=site:www.majestic12.co.uk">domain clustering</a> (site: prefix works now). This release will serve as the basis for work to improve relevance of search matches. The search engine is now hosted on a dedicated box so response time should be more reasonable now.
+<p>
+Separately a significant milestone of over 1 bln <a href="/projects/dsearch/tlds.php">known URLs</a> have been reached! In light of considerably higher crawling rates than ever before a special effort will take place to ensure that there is enough supply of URLs to crawl without having to panic and add them at the last minute! :)
+
+<p>
+
+<b>27/07/05</b> <b>Talk at Birmingham's UK Perl Mongers group</b><br>
+<p>
+Presentation of talk before <a href="http://birmingham.pm.org/docs/technical-next.html">Birmingham Perl Mongers User Group (UK)</a> on topic of <a href="research/WWW-Search-Engine-But-Not-In-Perl.ppt">"Building a scalable distributed WWW search engine ... NOT in Perl!"</a> (requires PowerPoint). :)
+
+</td>
+<td valign=top>
+<center><font size="2"><b>Distributed Network Stats</b></font></center><br>
+
+<a href='projects/dsearch/stats.php'><img border=0 src="/stats/allurls_by_day.php?w=300&h=160" width=300 height=160></a>
+
+
+<br><br><center><font size="2"><b>Top 10 users (Today)</b></font></center><br><table border=0 bgcolor='#EEEEEE' width=330 border=0><tr><td align='center'><b><font size=1>#</b></td><td align='center'><font size=1><b>Nick</b></td><td align=center><font size=1><b>URLs<br>done</b></td><td align=center><font size=1><b>Data<br>(MB)</b></td></tr><tr bgcolor='#FFFFFF'><td align='center' valign='middle'><font size=1>1</td><td align='left' valign='middle'><font size=1><img width=24 height=16 border=0 align=left src='/images/flags/small/fi.gif' alt='Finland'> <a href='/projects/dsearch/userinfo.php?id=219'>Codepic</a></td><td align='right'  valign='middle'><font size=1>3,260,000</td><td align='right'  valign='middle'><font size=1>56,029</td></tr><tr><td align='center' valign='middle'><font size=1>2</td><td align='left' valign='middle'><font size=1><img width=24 height=16 border=0 align=left src='/images/flags/small/us.gif' alt='United States'> <a href='/projects/dsearch/userinfo.php?id=127'>scottsaxman</a></td><td align='right'  valign='middle'><font size=1>1,427,280</td><td align='right'  valign='middle'><font size=1>22,453</td></tr><tr bgcolor='#FFFFFF'><td align='center' valign='middle'><font size=1>3</td><td align='left' valign='middle'><font size=1><img width=24 height=16 border=0 align=left src='/images/flags/small/ca.gif' alt='Canada'> <a href='/projects/dsearch/userinfo.php?id=225'>huguesmackay</a></td><td align='right'  valign='middle'><font size=1>1,330,000</td><td align='right'  valign='middle'><font size=1>18,374</td></tr><tr><td align='center' valign='middle'><font size=1>4</td><td align='left' valign='middle'><font size=1><img width=24 height=16 border=0 align=left src='/images/flags/small/england.gif' alt='England'> <a href='/projects/dsearch/userinfo.php?id=184'>Evil-Dragon</a></td><td align='right'  valign='middle'><font size=1>1,010,000</td><td align='right'  valign='middle'><font size=1>18,368</td></tr><tr bgcolor='#FFFFFF'><td align='center' valign='middle'><font size=1>5</td><td align='left' valign='middle'><font size=1><img width=24 height=16 border=0 align=left src='/images/flags/small/fi.gif' alt='Finland'> <a href='/projects/dsearch/userinfo.php?id=235'>tantzu</a></td><td align='right'  valign='middle'><font size=1>660,000</td><td align='right'  valign='middle'><font size=1>12,433</td></tr><tr><td align='center' valign='middle'><font size=1>6</td><td align='left' valign='middle'><font size=1><img width=24 height=16 border=0 align=left src='/images/flags/small/nl.gif' alt='Netherlands'> <a href='/projects/dsearch/userinfo.php?id=34'>www.vanginkel.info</a></td><td align='right'  valign='middle'><font size=1>650,000</td><td align='right'  valign='middle'><font size=1>11,454</td></tr><tr bgcolor='#FFFFFF'><td align='center' valign='middle'><font size=1>7</td><td align='left' valign='middle'><font size=1><img width=24 height=16 border=0 align=left src='/images/flags/small/england.gif' alt='England'> <a href='/projects/dsearch/userinfo.php?id=4'>FiddleAbout</a></td><td align='right'  valign='middle'><font size=1>580,000</td><td align='right'  valign='middle'><font size=1>10,375</td></tr><tr><td align='center' valign='middle'><font size=1>8</td><td align='left' valign='middle'><font size=1><img width=24 height=16 border=0 align=left src='/images/flags/small/ca.gif' alt='Canada'> <a href='/projects/dsearch/userinfo.php?id=159'>istvan43</a></td><td align='right'  valign='middle'><font size=1>480,000</td><td align='right'  valign='middle'><font size=1>5,653</td></tr><tr bgcolor='#FFFFFF'><td align='center' valign='middle'><font size=1>9</td><td align='left' valign='middle'><font size=1><img width=24 height=16 border=0 align=left src='/images/flags/small/nl.gif' alt='Netherlands'> <a href='/projects/dsearch/userinfo.php?id=170'>sportman</a></td><td align='right'  valign='middle'><font size=1>450,000</td><td align='right'  valign='middle'><font size=1>7,891</td></tr><tr><td align='center' valign='middle'><font size=1>10</td><td align='left' valign='middle'><font size=1><img width=24 height=16 border=0 align=left src='/images/flags/small/fi.gif' alt='Finland'> <a href='/projects/dsearch/userinfo.php?id=125'>www.finnserver.com</a></td><td align='right'  valign='middle'><font size=1>440,000</td><td align='right'  valign='middle'><font size=1>8,089</td></tr><tr bgcolor='#FFFFFF'><td align='center' colspan=2><font size=1><b>Total (<a href='/projects/dsearch/stats.php'>27 users</a>)</b></td><td align='right'><font size=1><b>12,665,620</b></td><td align='right'><font size=1><b>171,119</b></td></tr></table><br><center><font size="2"><b>Top 10 users (Overall)</b></font></center><br><table border=0 bgcolor='#EEEEEE' width=330 border=0><tr><td align='center'><b><font size=1>#</b></td><td align='center'><font size=1><b>Nick</b></td><td align=center><font size=1><b>URLs<br>done</b></td><td align=center><font size=1><b>Data<br>(MB)</b></td></tr><tr bgcolor='#FFFFFF'><td align='center' valign='middle'><font size=1>1</td><td align='left' valign='middle'><font size=1><img width=24 height=16 border=0 align=left src='/images/flags/small/rs.gif' alt='Russia'> <a href='/projects/dsearch/userinfo.php?id=1'>alexc</a></td><td align='right'  valign='middle'><font size=1>280,704,151</td><td align='right'  valign='middle'><font size=1>2,385,402</td></tr><tr><td align='center' valign='middle'><font size=1>2</td><td align='left' valign='middle'><font size=1><img width=24 height=16 border=0 align=left src='/images/flags/small/england.gif' alt='England'> <a href='/projects/dsearch/userinfo.php?id=4'>FiddleAbout</a></td><td align='right'  valign='middle'><font size=1>152,517,471</td><td align='right'  valign='middle'><font size=1>1,869,623</td></tr><tr bgcolor='#FFFFFF'><td align='center' valign='middle'><font size=1>3</td><td align='left' valign='middle'><font size=1><img width=24 height=16 border=0 align=left src='/images/flags/small/sz.gif' alt='Switzerland'> <a href='/projects/dsearch/userinfo.php?id=62'>lazytom</a></td><td align='right'  valign='middle'><font size=1>119,309,055</td><td align='right'  valign='middle'><font size=1>1,843,378</td></tr><tr><td align='center' valign='middle'><font size=1>4</td><td align='left' valign='middle'><font size=1><img width=24 height=16 border=0 align=left src='/images/flags/small/nl.gif' alt='Netherlands'> <a href='/projects/dsearch/userinfo.php?id=170'>sportman</a></td><td align='right'  valign='middle'><font size=1>110,319,309</td><td align='right'  valign='middle'><font size=1>2,430,038</td></tr><tr bgcolor='#FFFFFF'><td align='center' valign='middle'><font size=1>5</td><td align='left' valign='middle'><font size=1><img width=24 height=16 border=0 align=left src='/images/flags/small/england.gif' alt='England'> <a href='/projects/dsearch/userinfo.php?id=5'>dazza12</a></td><td align='right'  valign='middle'><font size=1>93,980,193</td><td align='right'  valign='middle'><font size=1>1,072,352</td></tr><tr><td align='center' valign='middle'><font size=1>6</td><td align='left' valign='middle'><font size=1><img width=24 height=16 border=0 align=left src='/images/flags/small/us.gif' alt='United States'> <a href='/projects/dsearch/userinfo.php?id=18'>linuxbren</a></td><td align='right'  valign='middle'><font size=1>68,687,885</td><td align='right'  valign='middle'><font size=1>603,638</td></tr><tr bgcolor='#FFFFFF'><td align='center' valign='middle'><font size=1>7</td><td align='left' valign='middle'><font size=1><img width=24 height=16 border=0 align=left src='/images/flags/small/uk.gif' alt='United Kingdom'> <a href='/projects/dsearch/userinfo.php?id=8'>Mordac</a></td><td align='right'  valign='middle'><font size=1>68,087,005</td><td align='right'  valign='middle'><font size=1>893,348</td></tr><tr><td align='center' valign='middle'><font size=1>8</td><td align='left' valign='middle'><font size=1><img width=24 height=16 border=0 align=left src='/images/flags/small/us.gif' alt='United States'> <a href='/projects/dsearch/userinfo.php?id=127'>scottsaxman</a></td><td align='right'  valign='middle'><font size=1>48,299,476</td><td align='right'  valign='middle'><font size=1>1,017,182</td></tr><tr bgcolor='#FFFFFF'><td align='center' valign='middle'><font size=1>9</td><td align='left' valign='middle'><font size=1><img width=24 height=16 border=0 align=left src='/images/flags/small/england.gif' alt='England'> <a href='/projects/dsearch/userinfo.php?id=184'>Evil-Dragon</a></td><td align='right'  valign='middle'><font size=1>41,429,649</td><td align='right'  valign='middle'><font size=1>926,502</td></tr><tr><td align='center' valign='middle'><font size=1>10</td><td align='left' valign='middle'><font size=1><img width=24 height=16 border=0 align=left src='/images/flags/small/gm.gif' alt='Germany'> <a href='/projects/dsearch/userinfo.php?id=22'>Cyber911</a></td><td align='right'  valign='middle'><font size=1>40,732,137</td><td align='right'  valign='middle'><font size=1>201,573</td></tr><tr bgcolor='#FFFFFF'><td align='center' colspan=2><font size=1><b>Total (<a href='/projects/dsearch/stats.php'>124 users</a>)</b></td><td align='right'><font size=1><b>1,360,618,700</b></td><td align='right'><font size=1><b>13,243,036</b></td></tr></table><br><center><font size=2>Join the pioneers <a href='/projects/dsearch/download.php'>here</a>!</center><div align=right><p><font size=1>Last updated: 2005-10-01 15:32 GMT </font></div></td>
+
+</tr>
+</table>
+
+
+</td></tr></table>
+
+<tr><td colspan="2"><font size="-2"><center><b>Copyright &copy; Majestic-12</b></center></font></td></tr>
+
+</td></tr></table>
+
+</td>
+
+<td bgcolor="#000000" width="1"><img src="/images/black.gif" width="1" height="1"></td></tr>
+</tr>
+
+<tr><td colspan="3" bgcolor="#000000" height="1"><img src="/images/black.gif" width="1" height="1"></td></tr>
+
+
+</table>
+</div>
+
+</body>
+</html>

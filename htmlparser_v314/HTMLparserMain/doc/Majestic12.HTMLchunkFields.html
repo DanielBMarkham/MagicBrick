@@ -1,0 +1,64 @@
+<html dir="LTR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <title>HTMLchunk Fields</title>
+    <xml>
+    </xml>
+    <link rel="stylesheet" type="text/css" href="MSDN.css" />
+  </head>
+  <body id="bodyID" class="dtBODY">
+    <div id="nsbanner">
+      <div id="bannerrow1">
+        <table class="bannerparthead" cellspacing="0">
+          <tr id="hdr">
+            <td class="runninghead">High-performance .NET C# HTMLparser Library</td>
+            <td class="product">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="TitleRow">
+        <h1 class="dtH1">HTMLchunk Fields</h1>
+      </div>
+    </div>
+    <div id="nstext">
+      <p>The fields of the <b>HTMLchunk</b> class are listed below. For a complete list of <b>HTMLchunk</b> class members, see the <a href="Majestic12.HTMLchunkMembers.html">HTMLchunk Members</a> topic.</p>
+      <h4 class="dtH4">Public Instance Fields</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+<tr VALIGN="top"><td width="50%"><img src="pubfield.gif"></img><a href="Majestic12.HTMLchunk.bHashMode.html">bHashMode</a></td><td width="50%"> If true then tag params will be kept in a hash rather than in a fixed size arrays. This will be slow down parsing, but make it easier to use. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubfield.gif"></img><a href="Majestic12.HTMLchunk.cParamChars.html">cParamChars</a></td><td width="50%"> Character used to quote param's value: it is taken actually from parsed HTML </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubfield.gif"></img><a href="Majestic12.HTMLchunk.iChunkLength.html">iChunkLength</a></td><td width="50%"> Length of the chunk in bHTML data array </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubfield.gif"></img><a href="Majestic12.HTMLchunk.iChunkOffset.html">iChunkOffset</a></td><td width="50%"> Offset in bHTML data array at which this chunk starts </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubfield.gif"></img><a href="Majestic12.HTMLchunk.iParams.html">iParams</a></td><td width="50%"> Number of parameters and values stored in sParams array, OR in oParams hashtable if bHashMode is true </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubfield.gif"></img><a href="Majestic12.HTMLchunk.oEnc.html">oEnc</a></td><td width="50%"> Encoder to be used for conversion of binary data into strings, Encoding.Default is used by default, but it can be changed if top level user of the parser detects that encoding was different </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubfield.gif"></img><a href="Majestic12.HTMLchunk.oHTML.html">oHTML</a></td><td width="50%"> For TAGS: it stores raw HTML that was parsed to generate thus chunk will be here UNLESS HTMLparser was configured not to store it there as it can improve performance  For TEXT or COMMENTS: actual text or comments - you MUST call Finalise(); first. 
+            </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubfield.gif"></img><a href="Majestic12.HTMLchunk.oParams.html">oParams</a></td><td width="50%"> Hashtable with tag parameters: keys are param names and values are param values. ONLY used if bHashMode is set to TRUE. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubfield.gif"></img><a href="Majestic12.HTMLchunk.oType.html">oType</a></td><td width="50%"> Chunk type showing whether its text, open or close tag, comments or script. WARNING: if type is comments or script then you have to manually call Finalise(); method in order to have actual text of comments/scripts in oHTML variable </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubfield.gif"></img><a href="Majestic12.HTMLchunk.sParams.html">sParams</a></td><td width="50%"> Param names will be stored here - actual number is in iParams. ONLY used if bHashMode is set to FALSE. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubfield.gif"></img><a href="Majestic12.HTMLchunk.sTag.html">sTag</a></td><td width="50%"> If its open/close tag type then this is where lowercased Tag will be kept </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubfield.gif"></img><a href="Majestic12.HTMLchunk.sValues.html">sValues</a></td><td width="50%"> Param values will be stored here - actual number is in iParams. ONLY used if bHashMode is set to FALSE. </td></tr></table>
+      </div>
+      <h4 class="dtH4">See Also</h4>
+      <p>
+        <a href="Majestic12.HTMLchunk.html">HTMLchunk Class</a> | <a href="Majestic12.html">Majestic12 Namespace</a></p>
+      <object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" viewastext="true" style="display: none;">
+        <param name="Keyword" value="HTMLchunk class, fields">
+        </param>
+      </object>
+      <hr />
+      <div id="footer">
+        <p>
+          <a href="mailto:alexc@majestic12.co.uk?subject=High-performance%20.NET%20C#%20HTMLparser%20Library%20Documentation%20Feedback:%20HTMLchunk Fields">Send comments on this topic.</a>
+        </p>
+        <p>
+          <a href="http://www.majestic12.co.uk">Copyright (c) Alex Chudnovsky, Majestic-12 (UK)</a>
+        </p>
+        <p>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

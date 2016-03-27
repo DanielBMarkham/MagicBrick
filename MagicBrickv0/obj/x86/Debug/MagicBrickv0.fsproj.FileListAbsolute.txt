@@ -1,0 +1,52 @@
+C:\Users\Daniel Markham\documents\visual studio 2010\Projects\MagicBrickv0\MagicBrickv0\bin\Debug\MagicBrickv0.XML
+C:\Users\Daniel Markham\documents\visual studio 2010\Projects\MagicBrickv0\MagicBrickv0\bin\Debug\MagicBrickv0.exe
+C:\Users\Daniel Markham\documents\visual studio 2010\Projects\MagicBrickv0\MagicBrickv0\bin\Debug\MagicBrickv0.pdb
+C:\Users\Daniel Markham\documents\visual studio 2010\Projects\MagicBrickv0\MagicBrickv0\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Daniel Markham\documents\visual studio 2010\Projects\MagicBrickv0\MagicBrickv0\obj\x86\Debug\MagicBrickv0.exe
+C:\Users\Daniel Markham\documents\visual studio 2010\Projects\MagicBrickv0\MagicBrickv0\obj\x86\Debug\MagicBrickv0.pdb
+C:\Users\Daniel Markham\documents\visual studio 2010\Projects\MagicBrickv0\MagicBrickv0\bin\Debug\HtmlAgilityPack.dll
+C:\Users\Daniel Markham\documents\visual studio 2010\Projects\MagicBrickv0\MagicBrickv0\bin\Debug\HTMLparserLib.dll
+C:\Users\Daniel Markham\documents\visual studio 2010\Projects\MagicBrickv0\MagicBrickv0\bin\Debug\HTMLparserLib.pdb
+C:\Users\Daniel Markham\documents\visual studio 2010\Projects\MagicBrickv0\MagicBrickv0\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\Daniel Markham\documents\visual studio 2010\Projects\MagicBrickv0\MagicBrickv0\bin\Debug\HtmlAgilityPack.xml
+C:\Users\Daniel Markham\documents\visual studio 2010\Projects\MagicBrickv0\MagicBrickv0\bin\Debug\FParsec.dll
+C:\Users\Daniel Markham\documents\visual studio 2010\Projects\MagicBrickv0\MagicBrickv0\bin\Debug\FParsecCS.dll
+C:\Users\Daniel Markham\documents\visual studio 2010\Projects\MagicBrickv0\MagicBrickv0\bin\Debug\FParsec.pdb
+C:\Users\Daniel Markham\documents\visual studio 2010\Projects\MagicBrickv0\MagicBrickv0\bin\Debug\FParsecCS.pdb
+C:\Users\Daniel Markham\documents\visual studio 2010\Projects\MagicBrickv0\MagicBrickv0\bin\Debug\FParsecCS.xml
+C:\Users\Daniel Markham\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\MagicBrickv0.XML
+C:\Users\Daniel Markham\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\MagicBrickv0.exe
+C:\Users\Daniel Markham\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\MagicBrickv0.pdb
+C:\Users\Daniel Markham\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\FSharp.Core.dll
+C:\Users\Daniel Markham\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\HTMLparserLib.dll
+C:\Users\Daniel Markham\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\System.Web.dll
+C:\Users\Daniel Markham\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\FParsecCS.dll
+C:\Users\Daniel Markham\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\HTMLparserLib.pdb
+C:\Users\Daniel Markham\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\FParsec.pdb
+C:\Users\Daniel Markham\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\FSharp.Core.xml
+C:\Users\Daniel Markham\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\Daniel Markham\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\HtmlAgilityPack.xml
+C:\Users\Daniel Markham\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\FParsecCS.pdb
+C:\Users\Daniel Markham\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\FParsecCS.xml
+C:\Users\Daniel Markham\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\obj\x86\Debug\MagicBrickv0.fsprojResolveAssemblyReference.cache
+C:\Users\Daniel Markham\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\obj\x86\Debug\MagicBrickv0.exe
+C:\Users\Daniel Markham\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\obj\x86\Debug\MagicBrickv0.pdb
+C:\Users\Daniel_Main\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\MagicBrickv0.XML
+C:\Users\Daniel_Main\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\MagicBrickv0.exe
+C:\Users\Daniel_Main\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\MagicBrickv0.pdb
+C:\Users\Daniel_Main\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\FSharp.Core.dll
+C:\Users\Daniel_Main\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\FSharp.PowerPack.dll
+C:\Users\Daniel_Main\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\HTMLparserLib.dll
+C:\Users\Daniel_Main\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\FParsecCS.dll
+C:\Users\Daniel_Main\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\HTMLparserLib.pdb
+C:\Users\Daniel_Main\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\FParsec.pdb
+C:\Users\Daniel_Main\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\FSharp.Core.xml
+C:\Users\Daniel_Main\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\FSharp.PowerPack.pdb
+C:\Users\Daniel_Main\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\FSharp.PowerPack.xml
+C:\Users\Daniel_Main\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\Daniel_Main\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\HtmlAgilityPack.xml
+C:\Users\Daniel_Main\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\FParsecCS.pdb
+C:\Users\Daniel_Main\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\bin\Debug\FParsecCS.xml
+C:\Users\Daniel_Main\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\obj\x86\Debug\MagicBrickv0.fsprojResolveAssemblyReference.cache
+C:\Users\Daniel_Main\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\obj\x86\Debug\MagicBrickv0.exe
+C:\Users\Daniel_Main\Dropbox\source\git-repos\MagicBrickv0\MagicBrickv0\obj\x86\Debug\MagicBrickv0.pdb

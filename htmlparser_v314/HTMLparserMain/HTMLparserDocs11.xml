@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HTMLparserDotNet11</name>
+    </assembly>
+    <members>
+        <member name="T:Majestic12.HTMLparserTest">
+            <summary>
+            HTMLparserTest: example of use of the HTML parser object
+            </summary>
+        </member>
+        <member name="F:Majestic12.HTMLparserTest.bReadLineDelay">
+            <summary>
+            If true then an ENTER will be required when running this test in interactive mode (default)
+            This mode can be switched off via command line switch NODELAY
+            </summary>
+        </member>
+        <member name="M:Majestic12.HTMLparserTest.Main(System.String[])">
+            <summary>
+            If you don't know what this function is, then its probably best for you not to proceed.
+            
+            </summary>
+        </member>
+        <member name="M:Majestic12.HTMLparserTest.Start(System.Int32,System.String)">
+            <summary>
+            Starts parsing
+            </summary>
+            <param name="iParseTimes">Number of times to parse document (useful for benchmarking)</param>
+        </member>
+        <member name="M:Majestic12.HTMLparserTest.BenchMarkParse(Majestic12.HTMLparser)">
+            <summary>
+            Parse for benchmarking purposes -- its pure test of HTML parsing object, no extra processing done here
+            </summary>
+            <param name="oP">Parser object</param>
+        </member>
+        <member name="M:Majestic12.HTMLparserTest.ParseAndPrint(Majestic12.HTMLparser)">
+            <summary>
+            Parses HTML by chunk, prints parsed data on screen and waits for ENTER to go to next chunk
+            </summary>
+            <param name="oP">Parser object</param>
+        </member>
+        <member name="M:Majestic12.HTMLparserTest.HandleMetaEncoding(Majestic12.HTMLparser,Majestic12.HTMLchunk,System.Boolean@)">
+            <summary>
+            Handles META tags that set page encoding
+            </summary>
+            <param name="oChunk">Chunk</param>
+        </member>
+    </members>
+</doc>

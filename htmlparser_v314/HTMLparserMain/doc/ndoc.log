@@ -1,0 +1,108 @@
+Building documentation...
+Initializing...
+Merging XML documentation...
+Building file mapping...
+Loading XSLT files...
+    namespace.xslt
+    namespacehierarchy.xslt
+    type.xslt
+    typehierarchy.xslt
+    allmembers.xslt
+    individualmembers.xslt
+    event.xslt
+    member.xslt
+    memberoverload.xslt
+    property.xslt
+    field.xslt
+    htmlcontents.xslt
+Generating HTML pages...
+Majestic12.html
+Majestic12Hierarchy.html
+Majestic12.HTMLchunk.html
+Majestic12.HTMLchunkMembers.html
+Majestic12.HTMLchunkConstructor.html
+Majestic12.HTMLchunkFields.html
+Majestic12.HTMLchunk.bHashMode.html
+Majestic12.HTMLchunk.cParamChars.html
+Majestic12.HTMLchunk.iChunkLength.html
+Majestic12.HTMLchunk.iChunkOffset.html
+Majestic12.HTMLchunk.iParams.html
+Majestic12.HTMLchunk.oEnc.html
+Majestic12.HTMLchunk.oHTML.html
+Majestic12.HTMLchunk.oParams.html
+Majestic12.HTMLchunk.oType.html
+Majestic12.HTMLchunk.sParams.html
+Majestic12.HTMLchunk.sTag.html
+Majestic12.HTMLchunk.sValues.html
+Majestic12.HTMLchunkMethods.html
+Majestic12.HTMLchunk.AddParam.html
+Majestic12.HTMLchunk.Clear.html
+Majestic12.HTMLchunk.ConvertParamsToHash.html
+Majestic12.HTMLchunk.Dispose.html
+Majestic12.HTMLchunk.GenerateHTML.html
+Majestic12.HTMLchunk.GenerateParamHTML.html
+Majestic12.HTMLchunk.GenerateParamsHTML.html
+Majestic12.HTMLchunk.GetParamValue.html
+Majestic12.HTMLchunk.MakeSafeParamValue.html
+Majestic12.HTMLchunk.SetEncoding.html
+Majestic12.HTMLchunkType.html
+Majestic12.HTMLparser.html
+Majestic12.HTMLparserMembers.html
+Majestic12.HTMLparserConstructor.html
+Majestic12.HTMLparserConstructor1.html
+Majestic12.HTMLparserConstructor2.html
+Majestic12.HTMLparserFields.html
+Majestic12.HTMLparser.bAutoExtractBetweenTagsOnly.html
+Majestic12.HTMLparser.bAutoKeepComments.html
+Majestic12.HTMLparser.bAutoKeepScripts.html
+Majestic12.HTMLparser.bAutoMarkClosedTagsWithParamsAsOpen.html
+Majestic12.HTMLparser.bCompressWhiteSpaceBeforeTag.html
+Majestic12.HTMLparser.oHE.html
+Majestic12.HTMLparserProperties.html
+Majestic12.HTMLparser.bDecodeEntities.html
+Majestic12.HTMLparser.bDecodeMiniEntities.html
+Majestic12.HTMLparser.bEnableHeuristics.html
+Majestic12.HTMLparserMethods.html
+Majestic12.HTMLparser.CalculateWidth.html
+Majestic12.HTMLparser.ChangeToEntities.html
+Majestic12.HTMLparser.CleanUp.html
+Majestic12.HTMLparser.Close.html
+Majestic12.HTMLparser.DecodeEntities.html
+Majestic12.HTMLparser.Dispose.html
+Majestic12.HTMLparser.Init_overloads.html
+Majestic12.HTMLparser.Init_overload_2.html
+Majestic12.HTMLparser.Init_overload_1.html
+Majestic12.HTMLparser.InitMiniEntities.html
+Majestic12.HTMLparser.IsBiggerFont.html
+Majestic12.HTMLparser.IsEqualOrBiggerFont.html
+Majestic12.HTMLparser.LoadFromFile.html
+Majestic12.HTMLparser.ParseFontSize.html
+Majestic12.HTMLparser.ParseNext.html
+Majestic12.HTMLparser.ParseNextTag.html
+Majestic12.HTMLparser.Reset.html
+Majestic12.HTMLparser.SetChunkHashMode.html
+Majestic12.HTMLparser.SetEncoding_overloads.html
+Majestic12.HTMLparser.SetEncoding_overload_2.html
+Majestic12.HTMLparser.SetEncoding_overload_1.html
+Majestic12.HTMLparser.SetRawHTML.html
+Generating HTML content file...
+transform the HHC contents file into html
+Compiling HTML Help file...
+Compiling Html Help file
+Microsoft HTML Help Compiler 4.74.8702
+
+Compiling h:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparser\doc\ndoc_msdn_temp\HTMLparserDocs.chm
+
+
+Compile time: 0 minutes, 1 second
+71	Topics
+419	Local links
+69	Internet links
+5	Graphics
+
+
+Created h:\Alex\PROJECTS\MJ12commonLib\OpenSource\HTMLparser\doc\ndoc_msdn_temp\HTMLparserDocs.chm, 57,689 bytes
+Compression decreased file by 184,530 bytes.
+
+Html Help compile complete
+Done.

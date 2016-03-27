@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>MagicBrickv0</name></assembly>
+<members>
+<member name="M:DiskUtils.loadFileToByteArray(System.String)">
+<summary>Loads a file. Returns byte array</summary>
+</member>
+<member name="T:DiskUtils">
+ <remarks>
+ Disk types and functions
+ </remarks>
+</member>
+<member name="T:EnglishMetaData">
+ <remarks>
+ This module provides the data about processing various pieces of the English language
+ </remarks>
+</member>
+<member name="M:Oink.treeMapTopDown(Oink.tpHtmlNode,Microsoft.FSharp.Core.FSharpFunc{Oink.tpHtmlNode,Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{System.Guid,Oink.tpHtmlNode},Microsoft.FSharp.Collections.FSharpMap{System.Guid,Oink.tpHtmlNode}}},Microsoft.FSharp.Collections.FSharpMap{System.Guid,Oink.tpHtmlNode})">
+<summary> send me the root node, the function that takes a parent, node and map and returns a map, and the original map,
+and I will return back to you the modified map after applying the function to all nodes in the tree, from top down</summary>
+</member>
+<member name="M:Oink.treeMapBottomUp(Oink.tpHtmlNode,Microsoft.FSharp.Core.FSharpFunc{Oink.tpHtmlNode,Microsoft.FSharp.Core.FSharpFunc{Oink.tpHtmlNode,Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{System.Guid,Oink.tpHtmlNode},Microsoft.FSharp.Collections.FSharpMap{System.Guid,Oink.tpHtmlNode}}}},Microsoft.FSharp.Collections.FSharpMap{System.Guid,Oink.tpHtmlNode})">
+<summary> send me the root node, the function that takes a parent, node and map and returns a map, and the original map,
+and I will return back to you the modified map after applying the function to all nodes in the tree, from bottom up</summary>
+</member>
+<member name="P:Sink.AsyncWorker`1.JobCompleted">
+<summary>
+ Raised when a particular job completes
+</summary>
+</member>
+<member name="P:Sink.AsyncWorker`1.Error">
+<summary>
+ Raised when the composition exhibits an error
+</summary>
+</member>
+<member name="P:Sink.AsyncWorker`1.Canceled">
+<summary>
+ Raised when the composition is cancelled successfully
+</summary>
+</member>
+<member name="P:Sink.AsyncWorker`1.AllCompleted">
+<summary>
+ Raised when all jobs complete
+</summary>
+</member>
+<member name="M:Sink.AsyncWorker`1.Start">
+ <summary>Start an instance of the work</summary>
+</member>
+<member name="T:Sink.AsyncWorker`1">
+<remarks>Worker bee class for doing long-running threaded work</remarks>
+</member>
+<member name="M:Sink.requestGate.AsyncAcquire(Microsoft.FSharp.Core.FSharpOption{System.Int32})">
+<summary>Call this method using a let! in your thread and your thread will wait until a gate becomes available. Useful for throttling various activities</summary>
+</member>
+<member name="T:Sink.requestGate">
+<remarks> a type that limits the numbers of something that can run at the same time, eg, opensockets</remarks>
+</member>
+<member name="T:Sink.Agent`1">
+ <remarks>
+ renaming of the Mailbox processor to what it really is, an agent
+ </remarks>
+</member>
+<member name="M:Sink.SynchronizationContext.raiseEventOnGuiThread``1(System.Threading.SynchronizationContext,Microsoft.FSharp.Control.FSharpEvent{``0},``0)">
+<summary>A standard helper to raise an event on the GUI thread</summary>
+</member>
+<member name="M:Sink.SynchronizationContext.CaptureCurrent.Static">
+ <summary>A standard helper extension method to capture the current synchronization context.
+ If none is present, use a context that executes work in the thread pool.</summary>
+</member>
+<member name="M:Sink.SynchronizationContext.RaiseEvent``1(System.Threading.SynchronizationContext,Microsoft.FSharp.Control.FSharpEvent{``0},``0)">
+ <summary>A standard helper extension method to raise an event on the GUI thread</summary>
+</member>
+<member name="T:Sink">
+ <remarks>
+ Module for holding types and functions related to multi-threading
+ </remarks>
+</member>
+<member name="T:SiteTextReaderData">
+ <remarks>
+ This module provides data to be able to turn web sites into human readable text.
+ (The code is in other modules. This module is data-only)
+ </remarks>
+</member>
+<member name="M:TypeUtils.getSimpleFieldValue``1(``0,System.String)">
+ <summary>Gets the value of a field when you only know it's name. Pass in the object and the fieldname. Returns the field and the typeName of the field</summary>
+</member>
+<member name="M:TypeUtils.fnGenericTypeTree``1(Microsoft.FSharp.Core.FSharpFunc{System.Tuple{System.String,System.String,System.Int32},Microsoft.FSharp.Core.Unit})">
+ <summary>Perform function f on all the members of an uninstantiated type</summary>
+</member>
+<member name="M:TypeUtils.cGenericTypeTree``1">
+ <summary></summary>
+</member>
+<member name="M:TypeUtils.fnTypeTree``1(``0,Microsoft.FSharp.Core.FSharpFunc{System.Tuple{System.String,System.String,System.Int32,System.Reflection.PropertyInfo,System.Object},Microsoft.FSharp.Core.Unit})">
+ <summary>Given an object that is instantiated, apply function f to all the members inside</summary>
+</member>
+<member name="M:TypeUtils.typeTree``1(``0)">
+ <summary>Given an object that is instantiated, give me a list of all the members inside, their values, their types, and their sizes</summary>
+</member>
+<member name="M:TypeUtils.genericTypeTree(System.Type,System.Reflection.PropertyInfo)">
+ <summary>This is the version of type tree that takes a type -- no instantiated oject required. It returns a list with the member name, member type, and memory size of the things inside the type</summary>
+</member>
+<member name="M:TypeUtils.typeTreeInner(System.Object,System.Reflection.PropertyInfo)">
+ <summary>The inner loop of the typeTree Functions. Give it a parent object and a property info for that object, and it returns a list of members.
+ Note that it takes an object -- something with values in it -- not a type</summary>
+</member>
+<member name="M:TypeUtils.getObjectTypeInfo``1(``0)">
+ <summary>If you only have a type and don't know what type owns it, this will get you the type info for that type</summary>
+</member>
+<member name="M:TypeUtils.toGenericTypeString(System.Type)">
+ <summary>take a type that is generic and might have many enclosed generics, and return the nested type name.
+</member>
+<member name="M:TypeUtils.makeObjectFromTypeAndObj(System.String,System.Object)">
+ <summary>Given an object that you know it's type, and you have a generic obj, make the "real" typed object from the obj
+ this is different from casting because with casting there is a "hidden" type. Here you really have no idea where it's from</summary>
+ <example>You're given an object from a datareader that goes in a type. Make it the type you know it to be</example>
+</member>
+<member name="M:TypeUtils.createGeneric(System.Type,System.Type,System.Object[])">
+ <summary>dynamically create a generic collection</summary>
+</member>
+<member name="M:TypeUtils.getPrimitiveValFromPropertyInfo``1(System.Object,System.Reflection.PropertyInfo)">
+ <summary>Instantiates a value given its parent object and its property info</summary>
+</member>
+<member name="M:TypeUtils.getPrimitiveTypeSize(System.Type)">
+ <summary>Returns the amount of physical space the type uses in memory</summary>
+</member>
+<member name="M:TypeUtils.mapStringKeyCaseInsItem``1(System.String,Microsoft.FSharp.Collections.FSharpMap{System.String,``0})">
+ <summary>Make the match collection into a sequence</summary>
+</member>
+<member name="M:TypeUtils.mapStringKeyCaseInsContainsKey``1(System.String,Microsoft.FSharp.Collections.FSharpMap{System.String,``0})">
+ <summary>Make the match collection into a sequence</summary>
+</member>
+<member name="M:TypeUtils.MatchCollection.get_toArray(System.Text.RegularExpressions.MatchCollection)">
+ <summary>Make the match collection into an F# array</summary>
+</member>
+<member name="M:TypeUtils.MatchCollection.get_toSeq(System.Text.RegularExpressions.MatchCollection)">
+ <summary>Make the match collection into a sequence</summary>
+</member>
+<member name="M:TypeUtils.MatchCollection.get_First(System.Text.RegularExpressions.MatchCollection)">
+ <summary>Return the first match</summary>
+</member>
+<member name="M:TypeUtils.MatchCollection.get_Last(System.Text.RegularExpressions.MatchCollection)">
+ <summary>Return the last match</summary>
+</member>
+<member name="M:TypeUtils.Regex.SplitKeepToken(System.Text.RegularExpressions.Regex,System.String)">
+ <summary>
+ Works like the regular RegEx split, but keeps the token as part of the returned array
+ </summary>
+ <param name="s">The string you want to split</param>
+ <returns>Returns an Array of strings from the split (just like normal Split)</returns>
+</member>
+<member name="M:TypeUtils.String.StripSub(System.String,System.String,System.String)">
+<summary>Return string between two tokens. Any error defaults to input string</summary>
+</member>
+<member name="M:TypeUtils.String.TrimBoth(System.String,System.Int32,System.Int32)">
+<summary>Trim x characters from left of string, and y characters from right of string</summary>
+</member>
+<member name="M:TypeUtils.String.TrimRight(System.String,System.Int32)">
+<summary>Tim n characters from right of string</summary>
+</member>
+<member name="M:TypeUtils.String.TrimLeft(System.String,System.Int32)">
+<summary>Trim n characters from left of string</summary>
+</member>
+<member name="M:TypeUtils.String.Left(System.String,System.Int32)">
+<summary>Gets the leftmost part of the string</summary>
+</member>
+<member name="M:TypeUtils.String.Right(System.String,System.Int32)">
+ <summary>Gets rightmost part of the string</summary>
+</member>
+<member name="M:TypeUtils.String.ContainsCaseInsensitive(System.String,System.String)">
+ <summary>Does the string contain a version of the other string no matter what the case of the letters are?</summary>
+</member>
+<member name="M:TypeUtils.IEnumerable.SliceNM``1(System.Collections.IEnumerable,System.Int32,System.Int32)">
+ <summary>Return a slice of the collection</summary>
+</member>
+<member name="M:TypeUtils.IEnumerable.LastN``1(System.Collections.IEnumerable,System.Int32)">
+ <summary>Return the last N items of the collection</summary>
+</member>
+<member name="M:TypeUtils.IEnumerable.FirstN``1(System.Collections.IEnumerable,System.Int32)">
+ <summary>Return the first N items of the collection</summary>
+</member>
+<member name="M:TypeUtils.IEnumerable.get_Count(System.Collections.IEnumerable)">
+ <summary>How many items in collection</summary>
+</member>
+<member name="M:TypeUtils.IEnumerable.MapArray``1(System.Collections.IEnumerable,Microsoft.FSharp.Core.FSharpFunc{System.Object,``0})">
+ <summary>Apply the function to each item, create a new F# array</summary>
+</member>
+<member name="M:TypeUtils.IEnumerable.MapList``1(System.Collections.IEnumerable,Microsoft.FSharp.Core.FSharpFunc{System.Object,``0})">
+ <summary>Apply the function to each item, create a new F# List</summary>
+</member>
+<member name="M:TypeUtils.IEnumerable.ResizeArrayMap``1(System.Collections.IEnumerable,Microsoft.FSharp.Core.FSharpFunc{System.Object,``0})">
+ <summary>Apply the function to each item in the collection, creating a new ResizeArray (.NET Array)</summary>
+</member>
+<member name="M:TypeUtils.IEnumerable.HashSetMap``1(System.Collections.IEnumerable,Microsoft.FSharp.Core.FSharpFunc{System.Object,``0})">
+ <summary>Apply function to each item, creating a new HashSet</summary>
+</member>
+<member name="M:TypeUtils.IEnumerable.Map``1(System.Collections.IEnumerable,Microsoft.FSharp.Core.FSharpFunc{System.Object,``0})">
+ <summary>Apply the function to each item in the collection, creating a new collection</summary>
+</member>
+<member name="M:TypeUtils.IEnumerable.Iter``1(System.Collections.IEnumerable,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.Unit})">
+ <summary>Apply the given function to each item in the collection</summary>
+</member>
+<member name="M:TypeUtils.Last``2(``0)">
+ <summary>Get the last element in the collection (inline version)</summary>
+</member>
+<member name="M:TypeUtils.First``2(``0)">
+ <summary>Get the first element in the collection (inline version)</summary>
+</member>
+<member name="M:TypeUtils.IEnumerable.get_Last(System.Collections.IEnumerable)">
+ <summary>Get the last element in the collection</summary>
+</member>
+<member name="M:TypeUtils.IEnumerable.get_First(System.Collections.IEnumerable)">
+ <summary>Get the first element in the collection</summary>
+</member>
+<member name="M:TypeUtils.IEnumerable`1.get_Last``1(System.Collections.Generic.IEnumerable{``0})">
+ <summary>Get the last element in the collection</summary>
+</member>
+<member name="M:TypeUtils.IEnumerable`1.get_First``1(System.Collections.Generic.IEnumerable{``0})">
+ <summary>Get the first element in the collection</summary>
+</member>
+<member name="M:TypeUtils.uncurry``3(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``2}},``0,``1)">
+ <summary>
+ Unzip a tupled function into a "normal" F# one
+ </summary>
+ <param name="f">The function that used to use a tuple (typically a .NET function)</param>
+ <param name="a">First parameter of the tuple</param>
+ <param name="b">Second parameter of the tuple</param>
+ <returns>Returns a method that can be pased in parts around and curried like other f# methods</returns>
+</member>
+<member name="T:TypeUtils">
+ <remarks>
+ Module for holding utilities related to .NET type manipulation
+ </remarks>
+</member>
+<member name="T:Utils.enumDateParts">
+<remarks>Pieces of a date. Used for parsing strings that might have funky dates</remarks>
+</member>
+<member name="M:Utils.processRelativeTime(System.String)">
+<summary>Takes a relative time - "3 mins ago" and tries to make it into a real System.DateTime</summary>
+</member>
+<member name="M:Utils.findDatePart(Utils.enumDateParts,System.String)">
+<summary>Given the enum for the date part you are looking for, and a string to check, tries to find the date value
+ by looking at the abbreviations and going back 3 characters from them</summary>    
+</member>
+<member name="M:Utils.getFirstMatchFromList(System.String,Microsoft.FSharp.Collections.FSharpList{System.String},System.Int32)">
+<summary>Go through the list. The first match from the list that exists in the string, return previous n characters. Case-insensitive.
+Useful when you have a string with some kind of units in it, like hrs, Hours, hours. This can return the numbers just before the units</summary>
+</member>
+<member name="M:Utils.regFindReplaceList(System.String,Microsoft.FSharp.Collections.FSharpList{System.Tuple{System.String,System.String}})">
+<summary>Takes a list of RegEx pattern strings and a list of things to replace
+ goes throug the string finding the pattern and replacing it. So like RegEx.Replace, only
+ with lists</summary>
+</member>
+<member name="M:Utils.sliceOutRegList(System.String,Microsoft.FSharp.Collections.FSharpList{System.Tuple{System.String,System.String}})">
+<summary>Works like stripOutRegs, taking a start and stop regex to mark an area of a string to slice</summary>
+</member>
+<member name="M:Utils.stripOutRegList(System.String,Microsoft.FSharp.Collections.FSharpList{System.Tuple{System.String,System.String}})">
+<summary>Works like stripOutRegs, taking a start and stop regex to mark an area of a string to slice</summary>
+</member>
+<member name="M:Utils.sliceOutRegs(System.String,System.String,System.String)">
+ <summary>Takes a list of RegEx strings pairs and uses them to return a smaller string from a larger string. First pair identifies beginning, second pair identifies end of section</summary>
+</member>
+<member name="M:Utils.stripOutRegs(System.String,System.String,System.String)">
+ <summary>Takes a list of RegEx strings pairs and uses them to trim a larger string. First pair identifies beginning, second pair identifies end of section</summary>
+</member>
+<member name="M:Utils.stripOutStrings(System.String,Microsoft.FSharp.Collections.FSharpList{System.String})">
+<summary>If anything in the list is present in the string, strip it out of the string.
+ Useful when you list a list of bad words or such that you want to zap from the string</summary>
+</member>
+<member name="M:Utils.listReplace``1(Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean},``0,Microsoft.FSharp.Collections.FSharpList{``0})">
+<wummary>When the function matches, replace the item in the list
+</member>
+<member name="M:Utils.removeDupes``1(Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>Gets rid of dupes in a list</summary>
+</member>
+<member name="T:Utils">
+ <remarks>
+ General-purpose utility module
+ </remarks>
+</member>
+<member name="M:WebUtils.getTextFromUrl(System.String)">
+<summary>Takes an url, loads the page, then attempts to get useful text from the page</summary>
+</member>
+<member name="M:WebUtils.getCleanTreeFromUrl(System.String)">
+<summary>Takes an url, loads the page, then returns a string list of the tree as it looked once it was cleaned of ads and menus</summary>
+</member>
+<member name="M:WebUtils.filterDoc(HtmlAgilityPack.HtmlDocument,System.Boolean)">
+<summary> this walks the tree, copying the pieces over and making a new doc with only interesting nodes
+ Nodes have previously been marked with attribute "###" and "DELETE ME" or "IGNORE ME" 
+ (delete whole thing or delete just that node and copy children up</summary>
+ <param name="doc">The source document</param>
+ <param name="copyComments">Whether or not to copy comments over</param>
+ <returns>A new document with nodes copied from the original document</returns>
+</member>
+<member name="M:WebUtils.agentHttp(System.String,Microsoft.FSharp.Core.FSharpFunc{System.String,Microsoft.FSharp.Core.Unit})">
+<summary>
+ Fetch the contents of a web page
+</summary>
+</member>
+<member name="M:WebUtils.cbAsyncHttp(System.String,Microsoft.FSharp.Core.FSharpFunc{System.String,Microsoft.FSharp.Core.Unit})">
+<summary>
+ Fetch the contents of a web page with error callback
+</summary>
+</member>
+<member name="M:WebUtils.asyncHttp(System.String)">
+<summary>
+ Fetch the contents of a web page
+</summary>
+</member>
+<member name="M:WebUtils.http(System.String)">
+<summary>
+ Fetch the contents of a web page
+</summary>
+</member>
+<member name="M:WebUtils.jsonEscapeString(System.String)">
+ <remarks>
+ Module for all web functions and types
+ </remarks>
+</member>
+<member name="M:Win32Utils.CreateRoundRectRgn(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+<summary>Create a rounded rectangle as a region. Useful for creating windows/controls with rounded corners</summary>
+</member>
+<member name="M:Win32Utils.LoadLibraryEx(System.String,System.IntPtr,System.UInt32)">
+ <summary>
+ To load the dll - dllFilePath dosen't have to be const - so I can read path from registry
+ </summary>
+ <param name="dllFilePath">file path with file name</param>
+ <param name="hFile">use IntPtr.Zero</param>
+ <param name="dwFlags">What will happend during loading dll
+ <para>LOAD_LIBRARY_AS_DATAFILE</para>
+ <para>DONT_RESOLVE_DLL_REFERENCES</para>
+ <para>LOAD_WITH_ALTERED_SEARCH_PATH</para>
+ <para>LOAD_IGNORE_CODE_AUTHZ_LEVEL</para>
+ </param>
+ <returns>Pointer to loaded Dll</returns>
+</member>
+<member name="T:Win32Utils">
+ <remarks>
+ Module for holding function references to a lot of Win32 code not provided in .NET
+ </remarks>
+</member>
+</members>
+</doc>

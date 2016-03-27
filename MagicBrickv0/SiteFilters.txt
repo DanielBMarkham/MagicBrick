@@ -1,0 +1,17 @@
+﻿UrlMatch: "*.*"
+	NodeDeleteBranch
+		Path{}
+			Path{}
+				Path{}
+	NodeKeep
+		Path{}
+	RegDelete
+		("","")
+			("","")
+				("","")
+	RegKeep
+		("","")
+
+	NodeDeleteItemPromoteBranch
+		Path{}
+			Path {}

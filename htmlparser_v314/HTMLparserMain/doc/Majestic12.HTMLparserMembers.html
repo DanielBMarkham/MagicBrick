@@ -1,0 +1,132 @@
+<html dir="LTR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <title>HTMLparser Members</title>
+    <xml>
+    </xml>
+    <link rel="stylesheet" type="text/css" href="MSDN.css" />
+  </head>
+  <body id="bodyID" class="dtBODY">
+    <div id="nsbanner">
+      <div id="bannerrow1">
+        <table class="bannerparthead" cellspacing="0">
+          <tr id="hdr">
+            <td class="runninghead">High-performance .NET C# HTMLparser Library</td>
+            <td class="product">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="TitleRow">
+        <h1 class="dtH1">HTMLparser Members
+					</h1>
+      </div>
+    </div>
+    <div id="nstext">
+      <p>
+        <a href="Majestic12.HTMLparser.html">HTMLparser overview</a>
+      </p>
+      <h4 class="dtH4">Public Static Methods</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><img src="static.gif" /><a href="Majestic12.HTMLparser.CalculateWidth.html">CalculateWidth</a></td><td width="50%"> Parses WIDTH param and calculates width </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><img src="static.gif" /><a href="Majestic12.HTMLparser.DecodeEntities.html">DecodeEntities</a></td><td width="50%"> This function will decode any entities found in a string - not fast! </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><img src="static.gif" /><a href="Majestic12.HTMLparser.IsBiggerFont.html">IsBiggerFont</a></td><td width="50%"> Checks if first font is bigger than the second </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><img src="static.gif" /><a href="Majestic12.HTMLparser.IsEqualOrBiggerFont.html">IsEqualOrBiggerFont</a></td><td width="50%"> Checks if first font is equal or bigger than the second </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><img src="static.gif" /><a href="Majestic12.HTMLparser.ParseFontSize.html">ParseFontSize</a></td><td width="50%"> Parses font's tag size param </td></tr></table>
+      </div>
+      <h4 class="dtH4">Public Instance Constructors</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+          <tr VALIGN="top">
+            <td width="50%">
+              <img src="pubmethod.gif" />
+              <a href="Majestic12.HTMLparserConstructor.html">HTMLparser</a>
+            </td>
+            <td width="50%">Overloaded. Initializes a new instance of the HTMLparser class.</td>
+          </tr>
+        </table>
+      </div>
+      <h4 class="dtH4">Public Instance Fields</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+<tr VALIGN="top"><td width="50%"><img src="pubfield.gif"></img><a href="Majestic12.HTMLparser.bAutoExtractBetweenTagsOnly.html">bAutoExtractBetweenTagsOnly</a></td><td width="50%"> If true (and either bAutoKeepComments or bAutoKeepScripts is true), then oHTML will be set to data BETWEEN tags excluding those tags themselves, as otherwise FULL HTML will be set, ie: '<!-- comments -->' but if this is set to true then only ' comments ' will be returned </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubfield.gif"></img><a href="Majestic12.HTMLparser.bAutoKeepComments.html">bAutoKeepComments</a></td><td width="50%"> If true (default) then HTML for comments tags themselves AND between them will be set to oHTML variable, otherwise it will be empty but you can always set it later </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubfield.gif"></img><a href="Majestic12.HTMLparser.bAutoKeepScripts.html">bAutoKeepScripts</a></td><td width="50%"> If true (default: false) then HTML for script tags themselves AND between them will be set to oHTML variable, otherwise it will be empty but you can always set it later </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubfield.gif"></img><a href="Majestic12.HTMLparser.bAutoMarkClosedTagsWithParamsAsOpen.html">bAutoMarkClosedTagsWithParamsAsOpen</a></td><td width="50%"> Long winded name... by default if tag is closed BUT it has got parameters then we will consider it open tag, this is not right for proper XML parsing </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubfield.gif"></img><a href="Majestic12.HTMLparser.bCompressWhiteSpaceBeforeTag.html">bCompressWhiteSpaceBeforeTag</a></td><td width="50%"> If true (default), then all whitespace before TAG starts will be compressed to single space char (32 or 0x20) this makes parser run a bit faster, if you need exact whitespace before tags then change this flag to FALSE </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubfield.gif"></img><a href="Majestic12.HTMLparser.oHE.html">oHE</a></td><td width="50%"> Heuristics engine used by Tag Parser to quickly match known tags and attribute names, can be disabled or you can add more tags to it to fit your most likely cases, it is currently tuned for HTML </td></tr></table>
+      </div>
+      <h4 class="dtH4">Public Instance Properties</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="Majestic12.HTMLparser.bDecodeEntities.html">bDecodeEntities</a></td><td width="50%"> </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="Majestic12.HTMLparser.bDecodeMiniEntities.html">bDecodeMiniEntities</a></td><td width="50%"> </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="Majestic12.HTMLparser.bEnableHeuristics.html">bEnableHeuristics</a></td><td width="50%"> If true (default) then heuristics engine will be used to match tags and attributes quicker, it is possible to add new tags to it, <a href="Majestic12.HTMLparser.oHE.html">oHE</a>
+            </td></tr></table>
+      </div>
+      <h4 class="dtH4">Public Instance Methods</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="Majestic12.HTMLparser.ChangeToEntities.html">ChangeToEntities</a></td><td width="50%"> Parses line and changes known entiry characters into proper HTML entiries </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="Majestic12.HTMLparser.CleanUp.html">CleanUp</a></td><td width="50%"> Cleans up parser in preparation for next parsing </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="Majestic12.HTMLparser.Close.html">Close</a></td><td width="50%"> Closes object and releases all allocated resources </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="Majestic12.HTMLparser.Dispose.html">Dispose</a></td><td width="50%"> </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassEqualsTopic.htm">Equals</a> (inherited from <b>Object</b>)</td><td width="50%">
+        Determines whether the specified <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">Object</a> is equal to the current <b>Object</b>.
+      </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassGetHashCodeTopic.htm">GetHashCode</a> (inherited from <b>Object</b>)</td><td width="50%">
+        Serves as a hash function for a particular type, suitable for use in hashing algorithms and data structures like a hash table.
+      </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassGetTypeTopic.htm">GetType</a> (inherited from <b>Object</b>)</td><td width="50%">
+        Gets the <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemTypeClassTopic.htm">Type</a> of the current instance.
+      </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="Majestic12.HTMLparser.Init_overloads.html">Init</a></td><td width="50%">Overloaded.  Initialises parses with HTML to be parsed from provided string </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="Majestic12.HTMLparser.InitMiniEntities.html">InitMiniEntities</a></td><td width="50%"> Inits mini-entities mode: only "nbsp" will be converted into space, all other entities will be left as is </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="Majestic12.HTMLparser.LoadFromFile.html">LoadFromFile</a></td><td width="50%"> Loads HTML from file </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="Majestic12.HTMLparser.ParseNext.html">ParseNext</a></td><td width="50%"> Parses next chunk and returns it with </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="Majestic12.HTMLparser.ParseNextTag.html">ParseNextTag</a></td><td width="50%"> Returns next tag or null if end of document, text will be ignored completely </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="Majestic12.HTMLparser.Reset.html">Reset</a></td><td width="50%"> Resets current parsed data to start </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="Majestic12.HTMLparser.SetChunkHashMode.html">SetChunkHashMode</a></td><td width="50%"> Sets chunk param hash mode </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="Majestic12.HTMLparser.SetEncoding_overloads.html">SetEncoding</a></td><td width="50%">Overloaded.  Sets encoding </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="Majestic12.HTMLparser.SetRawHTML.html">SetRawHTML</a></td><td width="50%"> Sets oHTML variable in a chunk to the raw HTML that was parsed for that chunk. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassToStringTopic.htm">ToString</a> (inherited from <b>Object</b>)</td><td width="50%">
+        Returns a <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemStringClassTopic.htm">String</a> that represents the current <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">Object</a>.
+      </td></tr></table>
+      </div>
+      <h4 class="dtH4">Protected Instance Methods</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassFinalizeTopic.htm">Finalize</a> (inherited from <b>Object</b>)</td><td width="50%">
+        Allows an <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">Object</a> to attempt to free resources and perform other cleanup operations before the <b>Object</b> is reclaimed by garbage collection.
+      </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassMemberwiseCloneTopic.htm">MemberwiseClone</a> (inherited from <b>Object</b>)</td><td width="50%">
+        Creates a shallow copy of the current <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">Object</a>.
+      </td></tr></table>
+      </div>
+      <h4 class="dtH4">See Also</h4>
+      <p>
+        <a href="Majestic12.HTMLparser.html">HTMLparser Class</a> | <a href="Majestic12.html">Majestic12 Namespace</a></p>
+      <object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" viewastext="true" style="display: none;">
+        <param name="Keyword" value="HTMLparser class">
+        </param>
+        <param name="Keyword" value="Majestic12.HTMLparser class">
+        </param>
+        <param name="Keyword" value="HTMLparser class, all members">
+        </param>
+      </object>
+      <hr />
+      <div id="footer">
+        <p>
+          <a href="mailto:alexc@majestic12.co.uk?subject=High-performance%20.NET%20C#%20HTMLparser%20Library%20Documentation%20Feedback:%20HTMLparser%20Members&#xD;&#xA;						">Send comments on this topic.</a>
+        </p>
+        <p>
+          <a href="http://www.majestic12.co.uk">Copyright (c) Alex Chudnovsky, Majestic-12 (UK)</a>
+        </p>
+        <p>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
